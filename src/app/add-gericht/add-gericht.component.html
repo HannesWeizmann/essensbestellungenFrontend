@@ -1,3 +1,4 @@
+<button mat-stroked-button color="primary" class="btn-block" (click) = "navigateBack();" >Zurück</button>
 <mat-card-header>
     <mat-card-title>Gericht hinzufügen</mat-card-title>
 </mat-card-header>
@@ -17,5 +18,5 @@
                 <mat-option value=2>Suppe</mat-option>
               </mat-select>
     </mat-card-content>
-    <button mat-stroked-button color="primary" class="btn-block" >Speichern</button>
+    <button mat-stroked-button color="primary" class="btn-block" (click) = "addGericht()">Speichern</button>
 </form>
