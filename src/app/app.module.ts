@@ -16,6 +16,9 @@ import { AuthService } from './shared/auth.service';
 import { UserService } from './shared/user.service';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { AssignedUsersFormFieldComponent } from './shared/assigned-users-form-field/assigned-users-form-field.component';
+import { AdminportalComponent } from './adminportal/adminportal.component';
+import { AddGerichtComponent } from './add-gericht/add-gericht.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { AssignedUsersFormFieldComponent } from './shared/assigned-users-form-fi
     ProfileComponent,
     TransactionsComponent,
     UserManagementComponent,
-    AssignedUsersFormFieldComponent
+    AssignedUsersFormFieldComponent,
+    AdminportalComponent,
+    AddGerichtComponent
   ],
   imports: [
     BrowserModule,
