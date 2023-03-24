@@ -41,6 +41,7 @@ import { AssignedUsersFormFieldComponent } from './shared/assigned-users-form-fi
 })
 export class AppModule {
   constructor(private http: AppHttpClient) {
-    this.http.setBaseUrl("http://localhost:4500/api");
+    //this.http.setBaseUrl("http://localhost:4500/api");
+    this.http.setBaseUrl("http://localhost:3000");
   }
 }
