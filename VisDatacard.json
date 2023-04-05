@@ -1,0 +1,1464 @@
+{
+  "exception": {
+    "description": "string",
+    "id": "string",
+    "issue": [
+      {
+        "conflictLogSearchCriteria": [
+          {
+            "actorId": "string",
+            "causation": "string",
+            "conflictLogSearchCursor": {
+              "delta": true,
+              "technicalIdLeft": "string",
+              "technicalIdRight": "string",
+              "value": "string"
+            },
+            "dateFrom": "string",
+            "dateTo": "string",
+            "delta": true,
+            "idOfObject": "string",
+            "messageIds": "string",
+            "parameter1": "string",
+            "parameter2": "string",
+            "scrollRight": true,
+            "status": "string",
+            "type": "string"
+          }
+        ],
+        "delta": true,
+        "level": "string",
+        "messageId": "string",
+        "messageValues": [
+          {
+            "value": "string"
+          }
+        ],
+        "reference": "string",
+        "relatedObject": {
+          "deleted": true,
+          "objectId": "string",
+          "value": "string"
+        },
+        "source": "string",
+        "stackTrace": "string"
+      }
+    ]
+  },
+  "responseHeader": {
+    "context": "string",
+    "delta": true,
+    "value": "string"
+  },
+  "vehicleRestrictedInclMasterDataResponse": {
+    "issue": [
+      {
+        "delta": true,
+        "level": "string",
+        "messageId": "string",
+        "messageValues": [
+          {
+            "value": "string"
+          }
+        ],
+        "reference": "string",
+        "source": "string",
+        "stackTrace": "string"
+      }
+    ],
+    "requestParameter": [
+      "string"
+    ],
+    "vehicleInclMasterData": {
+      "activeCustomerServiceData": {
+        "vehicleOwnershipTitleNo": "string",
+        "unloadingCode": "string",
+        "objectId": "string",
+        "validSince": "string",
+        "xmlId": "string",
+        "archiveIndicator": "string"
+      },
+      "activeAssignedFpd": {
+        "delta": true,
+        "equipmentCodes": [
+          {
+            "code": "string",
+            "codeType": "string",
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "designation": "string",
+            "productGroupIndication": "string",
+            "source": "string",
+            "value": "string"
+          }
+        ],
+        "saa": [
+          {
+            "amountPerSaa": "string",
+            "delta": true,
+            "description": "string",
+            "designGroup": [
+              "string"
+            ],
+            "saaDesignation": "string",
+            "indicatorASRelevance": true,
+            "source": "string",
+            "typeIndicator": "string",
+            "value": "string"
+          }
+        ],
+        "vpd": [
+          {
+            "content": "string",
+            "delta": true,
+            "designation": "string",
+            "productCategory": "string",
+            "typeOf": "string",
+            "value": "string",
+            "vpdIdent": "string"
+          }
+        ]
+      },
+      "activeModelPlate": {
+        "power": "string",
+        "cubicCapacityCcm": "string",
+        "vehicleWeightKg": "string",
+        "vehicleType": "string",
+        "vehicleModelDesignation": "string",
+        "tiresAxle1": "string",
+        "tiresAxle2": "string",
+        "rimsAxle1": "string",
+        "rimsAxle2": "string",
+        "lowBeamLightBundle": "string",
+        "egPermitNumber": "string",
+        "combinedWeightKg": "string",
+        "axleLoadKg2": "string",
+        "axleLoadKg1": "string",
+        "xmlId": "string"
+      },
+      "activeProductDate": {
+        "ckdApprovalDate": "string",
+        "confirmationDate": "string",
+        "dateOfFirstRegistration": "string",
+        "deliveryDate": "string",
+        "endOfWarranty": "string",
+        "objectId": "string",
+        "productionDate": "string",
+        "shipmentDate": "string",
+        "startOfWarranty": "string",
+        "technicalApprovalDate": "string",
+        "transferDate": "string",
+        "validSince": "string",
+        "xmlId": "string",
+        "value": "string"
+      },
+      "activeProductionInfo": {
+        "objectId": "string",
+        "originAfterTreatmentSystemId": "string",
+        "originAfterTreatmentSystemObjectNo": "string",
+        "originAfterTreatmentSystemObjectVarNo": "string",
+        "originAxleFront1Id": "string",
+        "originAxleFront1ObjectNo": "string",
+        "originAxleFront1ObjectVarNo": "string",
+        "originAxleFront2Id": "string",
+        "originAxleFront2ObjectNo": "string",
+        "originAxleFront2ObjectVarNo": "string",
+        "originAxleFront3Id": "string",
+        "originAxleFront3ObjectNo": "string",
+        "originAxleFront3ObjectVarNo": "string",
+        "originAxleFront4Id": "string",
+        "originAxleFront4ObjectNo": "string",
+        "originAxleFront4ObjectVarNo": "string",
+        "originAxleRear1Id": "string",
+        "originAxleRear1ObjectNo": "string",
+        "originAxleRear1ObjectVarNo": "string",
+        "originAxleRear2Id": "string",
+        "originAxleRear2ObjectNo": "string",
+        "originAxleRear2ObjectVarNo": "string",
+        "originAxleRear3Id": "string",
+        "originAxleRear3ObjectNo": "string",
+        "originAxleRear3ObjectVarNo": "string",
+        "originAxleRear4Id": "string",
+        "originAxleRear4ObjectNo": "string",
+        "originAxleRear4ObjectVarNo": "string",
+        "originCabId": "string",
+        "originCabObjectNo": "string",
+        "originCabObjectVarNo": "string",
+        "originEngineId": "string",
+        "originEngineObjectNo": "string",
+        "originEngineObjectVarNo": "string",
+        "originTransferCaseId": "string",
+        "originTransferCaseObjectNo": "string",
+        "originTransferCaseObjectVarNo": "string",
+        "originTransmissionId": "string",
+        "originTransmissionObjectNo": "string",
+        "originTransmissionObjectVarNo": "string",
+        "validSince": "string",
+        "xmlId": "string",
+        "value": "string"
+      },
+      "activeState": {
+        "additionalCocCtrlElement": "string",
+        "additionalCocData": {
+          "brand": "string",
+          "cocNumber": "string",
+          "csn": "string",
+          "deleted": true,
+          "egPermitDate": "string",
+          "egPermitNumber": "string",
+          "emissionClass": "string",
+          "emissionClassCode": "string",
+          "errorCheckingNumber": "string",
+          "fuel": "string",
+          "gearType": "string",
+          "hsn": "string",
+          "manufacturerCode": "string",
+          "maxSpeed": "string",
+          "pressureAxle1": "string",
+          "pressureAxle2": "string",
+          "pressureAxle3": "string",
+          "pressureAxle4": "string",
+          "rimsAxle1": "string",
+          "rimsAxle2": "string",
+          "rimsAxle3": "string",
+          "rimsAxle4": "string",
+          "salesDesignation": "string",
+          "tiresAxle1": "string",
+          "tiresAxle2": "string",
+          "tiresAxle3": "string",
+          "tiresAxle4": "string",
+          "typeModelCode": "string",
+          "value": "string",
+          "variant": "string",
+          "variantModelCode": "string",
+          "vehicleMassKg": "string",
+          "version": "string"
+        },
+        "additionalEquipmentInfo": "string",
+        "afterTreatmentSystem": {
+          "activeAssignedFpd": {
+            "equipmentCodes": [
+              {
+                "code": "string",
+                "codeType": "string",
+                "delta": true,
+                "descriptions": [
+                  {
+                    "language": "string",
+                    "type": "string",
+                    "value": "string"
+                  }
+                ],
+                "designation": "string",
+                "productGroupIndication": "string",
+                "source": "string",
+                "value": "string"
+              }
+            ],
+            "saa": [
+              {
+                "amountPerSaa": "string",
+                "delta": true,
+                "description": "string",
+                "designGroup": [
+                  "string"
+                ],
+                "saaDesignation": "string",
+                "indicatorASRelevance": true,
+                "source": "string",
+                "typeIndicator": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "activeProductDate": {
+            "ckdApprovalDate": "string",
+            "confirmationDate": "string",
+            "dateOfFirstRegistration": "string",
+            "deliveryDate": "string",
+            "endOfWarranty": "string",
+            "objectId": "string",
+            "productionDate": "string",
+            "shipmentDate": "string",
+            "startOfWarranty": "string",
+            "technicalApprovalDate": "string",
+            "transferDate": "string",
+            "validSince": "string",
+            "value": "string"
+          },
+          "activeState": {
+            "checkDigitProductionNumber": "string",
+            "delta": true,
+            "dieselOxidationCatalyst": "string",
+            "fieldOrganisationText": [
+              {
+                "authorId": "string",
+                "automaticallyGenerated": true,
+                "date": "string",
+                "deleted": true,
+                "designGroup": [
+                  "string"
+                ],
+                "objectId": "string",
+                "positionNumber": "string",
+                "source": "string",
+                "textContent": "string"
+              }
+            ],
+            "calId": "string",
+            "hiddenInvestigation": true,
+            "leadingMajAssy": true,
+            "lockIndicator": true,
+            "orderNumber": "string",
+            "plant": "string",
+            "productLiabilityComments": "string",
+            "productLiabilityIndicator": true,
+            "productionNumber": "string",
+            "retrofittedFrom": "string",
+            "retrofittedTo": "string",
+            "scrapComments": "string",
+            "scrapDate": "string",
+            "status": "string",
+            "theftRelevantPartsUnlocked": true
+          },
+          "activeVehicle": "string",
+          "dataCardAvailable": true,
+          "delta": true,
+          "descriptions": [
+            {
+              "language": "string",
+              "type": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "lastModificationByPlant": "string",
+          "modelDesignation": "string",
+          "objectNumber": "string",
+          "objectNumberVariant": "string",
+          "technicalState": "string",
+          "variantInfoAvailable": true
+        },
+        "amgCountNumber": "string",
+        "axle": [
+          {
+            "activeAssignedFpd": {
+              "equipmentCodes": [
+                {
+                  "code": "string",
+                  "codeType": "string",
+                  "delta": true,
+                  "descriptions": [
+                    {
+                      "language": "string",
+                      "type": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "designation": "string",
+                  "productGroupIndication": "string",
+                  "source": "string",
+                  "value": "string"
+                }
+              ],
+              "saa": [
+                {
+                  "amountPerSaa": "string",
+                  "delta": true,
+                  "description": "string",
+                  "designGroup": [
+                    "string"
+                  ],
+                  "saaDesignation": "string",
+                  "indicatorASRelevance": true,
+                  "source": "string",
+                  "typeIndicator": "string",
+                  "value": "string"
+                }
+              ]
+            },
+            "activeProductDate": {
+              "ckdApprovalDate": "string",
+              "confirmationDate": "string",
+              "dateOfFirstRegistration": "string",
+              "deliveryDate": "string",
+              "endOfWarranty": "string",
+              "objectId": "string",
+              "productionDate": "string",
+              "shipmentDate": "string",
+              "startOfWarranty": "string",
+              "technicalApprovalDate": "string",
+              "transferDate": "string",
+              "validSince": "string",
+              "value": "string"
+            },
+            "activeState": {
+              "checkDigitProductionNumber": "string",
+              "delta": true,
+              "fieldOrganisationText": [
+                {
+                  "authorId": "string",
+                  "automaticallyGenerated": true,
+                  "date": "string",
+                  "deleted": true,
+                  "designGroup": [
+                    "string"
+                  ],
+                  "objectId": "string",
+                  "positionNumber": "string",
+                  "source": "string",
+                  "textContent": "string"
+                }
+              ],
+              "hiddenInvestigation": true,
+              "leadingMajAssy": true,
+              "lockIndicator": true,
+              "orderNumber": "string",
+              "planets": "string",
+              "plant": "string",
+              "productLiabilityComments": "string",
+              "productLiabilityIndicator": true,
+              "productionNumber": "string",
+              "redGearbox": "string",
+              "retrofittedFrom": "string",
+              "retrofittedTo": "string",
+              "scrapComments": "string",
+              "scrapDate": "string",
+              "status": "string",
+              "theftRelevantPartsUnlocked": true,
+              "totalTransmissionRate": "string",
+              "type": "string",
+              "value": "string",
+              "wheel": "string"
+            },
+            "activeVehicle": "string",
+            "dataCardAvailable": true,
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "id": "string",
+            "lastModificationByPlant": "string",
+            "modelDesignation": "string",
+            "objectNumber": "string",
+            "objectNumberVariant": "string",
+            "technicalState": "string",
+            "typeOf": "front1",
+            "variantInfoAvailable": true
+          }
+        ],
+        "body": [
+          {
+            "bodyManufacturer": "string",
+            "city": "string",
+            "contactPerson": "string",
+            "country": "string",
+            "customerRequestCodes": [
+              {
+                "category": "string",
+                "code": "string",
+                "designation": "string",
+                "productGroupIndication": "string",
+                "value": "string"
+              }
+            ],
+            "delta": true,
+            "email": "string",
+            "homepage": "string",
+            "name": "string",
+            "simplifiedWarrantyProcessing": true,
+            "singleInvoiceTransactionProductGroup": "string",
+            "singleInvoiceTransactionProductGroupKey": "string",
+            "street": "string",
+            "telephone": "string",
+            "textPriceFieldInformation": "string",
+            "type": "string",
+            "typeKey": "string",
+            "zipCode": "string"
+          }
+        ],
+        "bodyNumber": "string",
+        "cab": {
+          "activeAssignedFpd": {
+            "equipmentCodes": [
+              {
+                "code": "string",
+                "codeType": "string",
+                "delta": true,
+                "descriptions": [
+                  {
+                    "language": "string",
+                    "type": "string",
+                    "value": "string"
+                  }
+                ],
+                "designation": "string",
+                "productGroupIndication": "string",
+                "source": "string",
+                "value": "string"
+              }
+            ],
+            "saa": [
+              {
+                "amountPerSaa": "string",
+                "delta": true,
+                "description": "string",
+                "designGroup": [
+                  "string"
+                ],
+                "saaDesignation": "string",
+                "indicatorASRelevance": true,
+                "source": "string",
+                "typeIndicator": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "activeProductDate": {
+            "ckdApprovalDate": "string",
+            "confirmationDate": "string",
+            "dateOfFirstRegistration": "string",
+            "deliveryDate": "string",
+            "endOfWarranty": "string",
+            "objectId": "string",
+            "productionDate": "string",
+            "shipmentDate": "string",
+            "startOfWarranty": "string",
+            "technicalApprovalDate": "string",
+            "transferDate": "string",
+            "validSince": "string",
+            "value": "string"
+          },
+          "activeState": {
+            "bodyInfoAvailable": true,
+            "checkDigitProductionNumber": "string",
+            "delta": true,
+            "electroVariant": {
+              "delta": true,
+              "electroVariantDesignation": "string",
+              "number": "string",
+              "objectNumber": "string",
+              "usage": "string",
+              "value": "string",
+              "vpdContent": "string"
+            },
+            "fieldOrganisationText": [
+              {
+                "authorId": "string",
+                "automaticallyGenerated": true,
+                "date": "string",
+                "deleted": true,
+                "designGroup": [
+                  "string"
+                ],
+                "objectId": "string",
+                "positionNumber": "string",
+                "source": "string",
+                "textContent": "string"
+              }
+            ],
+            "hiddenInvestigation": true,
+            "leadingMajAssy": true,
+            "lockIndicator": true,
+            "orderNumber": "string",
+            "plant": "string",
+            "productLiabilityComments": "string",
+            "productLiabilityIndicator": true,
+            "productionNumber": "string",
+            "retrofittedFrom": "string",
+            "retrofittedTo": "string",
+            "scrapComments": "string",
+            "scrapDate": "string",
+            "status": "string",
+            "theftRelevantPartsUnlocked": true
+          },
+          "activeVehicle": "string",
+          "dataCardAvailable": true,
+          "delta": true,
+          "descriptions": [
+            {
+              "language": "string",
+              "type": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "lastModificationByPlant": "string",
+          "modelDesignation": "string",
+          "objectNumber": "string",
+          "objectNumberVariant": "string",
+          "technicalState": "string",
+          "variantInfoAvailable": true
+        },
+        "checkDigitProductionNumber": "string",
+        "ckdProductionNumber": "string",
+        "cocControlElement": "string",
+        "cocData": {
+          "allowedTireRimSize": "string",
+          "brand": "string",
+          "cocNumber": "string",
+          "csn": "string",
+          "deleted": true,
+          "egPermitDate": "string",
+          "egPermitNumber": "string",
+          "emissionClass": "string",
+          "emissionClassCode": "string",
+          "errorCheckingNumber": "string",
+          "fuel": "string",
+          "gearType": "string",
+          "hsn": "string",
+          "manufacturerCode": "string",
+          "maxSpeed": "string",
+          "pressureAxle1": "string",
+          "pressureAxle2": "string",
+          "pressureAxle3": "string",
+          "pressureAxle4": "string",
+          "rimsAxle1": "string",
+          "rimsAxle2": "string",
+          "rimsAxle3": "string",
+          "rimsAxle4": "string",
+          "salesDesignation": "string",
+          "tiresAxle1": "string",
+          "tiresAxle2": "string",
+          "tiresAxle3": "string",
+          "tiresAxle4": "string",
+          "typeModelCode": "string",
+          "value": "string",
+          "variant": "string",
+          "variantModelCode": "string",
+          "vehicleMassKg": "string",
+          "version": "string"
+        },
+        "cvBodyType": "string",
+        "cvOptCodeInfo": "string",
+        "cvRims": "string",
+        "cvVehicleType": "string",
+        "dateOfTechnicalState": "string",
+        "delta": true,
+        "electroEngine": [
+          {
+            "activeAssignedFpd": {
+              "equipmentCodes": [
+                {
+                  "code": "string",
+                  "codeType": "string",
+                  "delta": true,
+                  "descriptions": [
+                    {
+                      "language": "string",
+                      "type": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "designation": "string",
+                  "productGroupIndication": "string",
+                  "source": "string",
+                  "value": "string"
+                }
+              ],
+              "saa": [
+                {
+                  "amountPerSaa": "string",
+                  "delta": true,
+                  "description": "string",
+                  "designGroup": [
+                    "string"
+                  ],
+                  "saaDesignation": "string",
+                  "indicatorASRelevance": true,
+                  "source": "string",
+                  "typeIndicator": "string",
+                  "value": "string"
+                }
+              ]
+            },
+            "activeProductDate": {
+              "ckdApprovalDate": "string",
+              "confirmationDate": "string",
+              "dateOfFirstRegistration": "string",
+              "deliveryDate": "string",
+              "endOfWarranty": "string",
+              "objectId": "string",
+              "productionDate": "string",
+              "shipmentDate": "string",
+              "startOfWarranty": "string",
+              "technicalApprovalDate": "string",
+              "transferDate": "string",
+              "validSince": "string",
+              "value": "string"
+            },
+            "activeState": {
+              "checkDigitProductionNumber": "string",
+              "delta": true,
+              "fieldOrganisationText": [
+                {
+                  "authorId": "string",
+                  "automaticallyGenerated": true,
+                  "date": "string",
+                  "deleted": true,
+                  "designGroup": [
+                    "string"
+                  ],
+                  "objectId": "string",
+                  "positionNumber": "string",
+                  "source": "string",
+                  "textContent": "string"
+                }
+              ],
+              "hiddenInvestigation": true,
+              "leadingMajAssy": true,
+              "lockIndicator": true,
+              "orderNumber": "string",
+              "plant": "string",
+              "productLiabilityComments": "string",
+              "productLiabilityIndicator": true,
+              "productionNumber": "string",
+              "retrofittedFrom": "string",
+              "retrofittedTo": "string",
+              "scrapComments": "string",
+              "scrapDate": "string",
+              "status": "string",
+              "theftRelevantPartsUnlocked": true,
+              "value": "string"
+            },
+            "activeVehicle": "string",
+            "dataCardAvailable": true,
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "id": "string",
+            "lastModificationByPlant": "string",
+            "modelDesignation": "string",
+            "objectNumber": "string",
+            "objectNumberVariant": "string",
+            "technicalState": "string",
+            "typeOf": "eEngine1",
+            "variantInfoAvailable": true
+          }
+        ],
+        "electroVariant": [
+          {
+            "delta": true,
+            "electroVariantDesignation": "string",
+            "number": "string",
+            "objectNumber": "string",
+            "usage": "string",
+            "value": "string",
+            "vpdContent": "string"
+          }
+        ],
+        "engine": {
+          "activeAssignedFpd": {
+            "equipmentCodes": [
+              {
+                "code": "string",
+                "codeType": "string",
+                "delta": true,
+                "descriptions": [
+                  {
+                    "language": "string",
+                    "type": "string",
+                    "value": "string"
+                  }
+                ],
+                "designation": "string",
+                "productGroupIndication": "string",
+                "source": "string",
+                "value": "string"
+              }
+            ],
+            "saa": [
+              {
+                "amountPerSaa": "string",
+                "delta": true,
+                "description": "string",
+                "designGroup": [
+                  "string"
+                ],
+                "saaDesignation": "string",
+                "indicatorASRelevance": true,
+                "source": "string",
+                "typeIndicator": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "activeProductDate": {
+            "ckdApprovalDate": "string",
+            "confirmationDate": "string",
+            "dateOfFirstRegistration": "string",
+            "deliveryDate": "string",
+            "endOfWarranty": "string",
+            "objectId": "string",
+            "productionDate": "string",
+            "shipmentDate": "string",
+            "startOfWarranty": "string",
+            "technicalApprovalDate": "string",
+            "transferDate": "string",
+            "validSince": "string",
+            "value": "string",
+            "xmlId": "string"
+          },
+          "activeState": {
+            "basicSettings": "string",
+            "checkDigitProductionNumber": "string",
+            "delta": true,
+            "din3046": "string",
+            "din70020": "string",
+            "ece24": "string",
+            "eecStandard801269": "string",
+            "eecStandard88195": "string",
+            "fieldOrganisationText": [
+              {
+                "authorId": "string",
+                "automaticallyGenerated": true,
+                "date": "string",
+                "deleted": true,
+                "designGroup": [
+                  "string"
+                ],
+                "objectId": "string",
+                "positionNumber": "string",
+                "source": "string",
+                "textContent": "string"
+              }
+            ],
+            "hiddenInvestigation": true,
+            "idStamping": true,
+            "leadingMajAssy": true,
+            "lockIndicator": true,
+            "luNumber": "string",
+            "orderNumber": "string",
+            "overloadPower": "string",
+            "plant": "string",
+            "productLiabilityComments": "string",
+            "productLiabilityIndicator": true,
+            "productionNumber": "string",
+            "reconditionedEngine": "string",
+            "retrofittedFrom": "string",
+            "retrofittedTo": "string",
+            "scrapComments": "string",
+            "scrapDate": "string",
+            "standardPower": "string",
+            "status": "string",
+            "theftRelevantPartsUnlocked": true,
+            "value": "string"
+          },
+          "activeVehicle": "string",
+          "checkDigit": "string",
+          "dataCardAvailable": true,
+          "delta": true,
+          "descriptions": [
+            {
+              "language": "string",
+              "type": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "lastModificationByPlant": "string",
+          "modelDesignation": "string",
+          "objectNumber": "string",
+          "objectNumberVariant": "string",
+          "technicalState": "string",
+          "variantInfoAvailable": true
+        },
+        "exhaustSystem": "string",
+        "fieldOrganisationText": [
+          {
+            "authorId": "string",
+            "automaticallyGenerated": true,
+            "date": "string",
+            "deleted": true,
+            "designGroup": [
+              "string"
+            ],
+            "objectId": "string",
+            "positionNumber": "string",
+            "source": "string",
+            "textContent": "string"
+          }
+        ],
+        "finStamping": true,
+        "frontAxleLeftPc": "string",
+        "frontAxleRightPc": "string",
+        "frontAxleTransmissionNo": "string",
+        "frontAxleTransmissionObjNo": "string",
+        "fuelCell": [
+          {
+            "activeAssignedFpd": {
+              "equipmentCodes": [
+                {
+                  "code": "string",
+                  "codeType": "string",
+                  "delta": true,
+                  "descriptions": [
+                    {
+                      "language": "string",
+                      "type": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "designation": "string",
+                  "productGroupIndication": "string",
+                  "source": "string",
+                  "value": "string"
+                }
+              ],
+              "saa": [
+                {
+                  "amountPerSaa": "string",
+                  "delta": true,
+                  "description": "string",
+                  "designGroup": [
+                    "string"
+                  ],
+                  "saaDesignation": "string",
+                  "indicatorASRelevance": true,
+                  "source": "string",
+                  "typeIndicator": "string",
+                  "value": "string"
+                }
+              ]
+            },
+            "activeProductDate": {
+              "ckdApprovalDate": "string",
+              "confirmationDate": "string",
+              "dateOfFirstRegistration": "string",
+              "deliveryDate": "string",
+              "endOfWarranty": "string",
+              "objectId": "string",
+              "productionDate": "string",
+              "shipmentDate": "string",
+              "startOfWarranty": "string",
+              "technicalApprovalDate": "string",
+              "transferDate": "string",
+              "validSince": "string",
+              "value": "string"
+            },
+            "activeState": {
+              "checkDigitProductionNumber": "string",
+              "delta": true,
+              "fieldOrganisationText": [
+                {
+                  "authorId": "string",
+                  "automaticallyGenerated": true,
+                  "date": "string",
+                  "deleted": true,
+                  "designGroup": [
+                    "string"
+                  ],
+                  "objectId": "string",
+                  "positionNumber": "string",
+                  "source": "string",
+                  "textContent": "string"
+                }
+              ],
+              "hiddenInvestigation": true,
+              "leadingMajAssy": true,
+              "lockIndicator": true,
+              "orderNumber": "string",
+              "plant": "string",
+              "productLiabilityComments": "string",
+              "productLiabilityIndicator": true,
+              "productionNumber": "string",
+              "retrofittedFrom": "string",
+              "retrofittedTo": "string",
+              "scrapComments": "string",
+              "scrapDate": "string",
+              "status": "string",
+              "theftRelevantPartsUnlocked": true,
+              "value": "string"
+            },
+            "activeVehicle": "string",
+            "dataCardAvailable": true,
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "id": "string",
+            "lastModificationByPlant": "string",
+            "modelDesignation": "string",
+            "objectNumber": "string",
+            "objectNumberVariant": "string",
+            "technicalState": "string",
+            "typeOf": "fuelCell1",
+            "variantInfoAvailable": true
+          }
+        ],
+        "heater": "string",
+        "hiddenInvestigation": true,
+        "highVoltageBattery": [
+          {
+            "activeAssignedFpd": {
+              "equipmentCodes": [
+                {
+                  "code": "string",
+                  "codeType": "string",
+                  "delta": true,
+                  "descriptions": [
+                    {
+                      "language": "string",
+                      "type": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "designation": "string",
+                  "productGroupIndication": "string",
+                  "source": "string",
+                  "value": "string"
+                }
+              ],
+              "saa": [
+                {
+                  "amountPerSaa": "string",
+                  "delta": true,
+                  "description": "string",
+                  "designGroup": [
+                    "string"
+                  ],
+                  "saaDesignation": "string",
+                  "indicatorASRelevance": true,
+                  "source": "string",
+                  "typeIndicator": "string",
+                  "value": "string"
+                }
+              ]
+            },
+            "activeProductDate": {
+              "ckdApprovalDate": "string",
+              "confirmationDate": "string",
+              "dateOfFirstRegistration": "string",
+              "deliveryDate": "string",
+              "endOfWarranty": "string",
+              "objectId": "string",
+              "productionDate": "string",
+              "shipmentDate": "string",
+              "startOfWarranty": "string",
+              "technicalApprovalDate": "string",
+              "transferDate": "string",
+              "validSince": "string",
+              "value": "string"
+            },
+            "activeState": {
+              "checkDigitProductionNumber": "string",
+              "delta": true,
+              "fieldOrganisationText": [
+                {
+                  "authorId": "string",
+                  "automaticallyGenerated": true,
+                  "date": "string",
+                  "deleted": true,
+                  "designGroup": [
+                    "string"
+                  ],
+                  "objectId": "string",
+                  "positionNumber": "string",
+                  "source": "string",
+                  "textContent": "string"
+                }
+              ],
+              "hiddenInvestigation": true,
+              "leadingMajAssy": true,
+              "lockIndicator": true,
+              "orderNumber": "string",
+              "plant": "string",
+              "productLiabilityComments": "string",
+              "productLiabilityIndicator": true,
+              "productionNumber": "string",
+              "retrofittedFrom": "string",
+              "retrofittedTo": "string",
+              "scrapComments": "string",
+              "scrapDate": "string",
+              "status": "string",
+              "theftRelevantPartsUnlocked": true,
+              "value": "string"
+            },
+            "activeVehicle": "string",
+            "dataCardAvailable": true,
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "id": "string",
+            "lastModificationByPlant": "string",
+            "modelDesignation": "string",
+            "objectNumber": "string",
+            "objectNumberVariant": "string",
+            "technicalState": "string",
+            "typeOf": "highVoltageBat1",
+            "variantInfoAvailable": true
+          }
+        ],
+        "integralSupportNo": "string",
+        "integralSupportObjectNo": "string",
+        "interiorEquipment": [
+          {
+            "code": "string",
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "designation": "string",
+            "usage": "string",
+            "value": "string"
+          }
+        ],
+        "lastDiagnosticSession": "string",
+        "licencePlateNumber": "string",
+        "lights": "string",
+        "lockIndicator": true,
+        "modeOfShipment": "string",
+        "mteOrderNumber": "string",
+        "mteOrderer": "string",
+        "operationalPerformance": "string",
+        "orderNumber": "string",
+        "paint": [
+          {
+            "additionalPaintInfo": "string",
+            "code": "string",
+            "delta": true,
+            "descriptions": [
+              {
+                "language": "string",
+                "type": "string",
+                "value": "string"
+              }
+            ],
+            "designation": "string",
+            "kbaPaintDesignation": "string",
+            "usage": "string",
+            "value": "string"
+          }
+        ],
+        "pallet": "string",
+        "plant": "string",
+        "powerTakeOff": "string",
+        "productLiabilityComments": "string",
+        "productLiabilityIndicator": true,
+        "productionNumber": "string",
+        "rearAxlePc": "string",
+        "retarder": "string",
+        "salesAreaInformation": [
+          {
+            "designation": "string",
+            "salesArea": "string",
+            "salesAreaType": "string"
+          }
+        ],
+        "scrapComments": "string",
+        "scrapDate": "string",
+        "scratchResistantVarnish": "string",
+        "smallSeriesNumber": "string",
+        "status": "string",
+        "steeringInfoId": "string",
+        "steeringInfoObjectNo": "string",
+        "technicalData": {
+          "correction": "string",
+          "impulsValue": "string",
+          "objectId": "string",
+          "switchSettings": "string",
+          "serviceNumber": "string",
+          "kValue": "string"
+        },
+        "theftRelevantPartsUnlocked": true,
+        "tire": "string",
+        "tireData": [
+          {
+            "content": "string",
+            "deleted": true,
+            "objectId": "string",
+            "typeOf": "tire1",
+            "value": "string"
+          }
+        ],
+        "trailerHitch": "string",
+        "transferCase": {
+          "activeAssignedFpd": {
+            "equipmentCodes": [
+              {
+                "code": "string",
+                "codeType": "string",
+                "delta": true,
+                "descriptions": [
+                  {
+                    "language": "string",
+                    "type": "string",
+                    "value": "string"
+                  }
+                ],
+                "designation": "string",
+                "productGroupIndication": "string",
+                "source": "string",
+                "value": "string"
+              }
+            ],
+            "saa": [
+              {
+                "amountPerSaa": "string",
+                "delta": true,
+                "description": "string",
+                "designGroup": [
+                  "string"
+                ],
+                "saaDesignation": "string",
+                "indicatorASRelevance": true,
+                "source": "string",
+                "typeIndicator": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "activeProductDate": {
+            "ckdApprovalDate": "string",
+            "confirmationDate": "string",
+            "dateOfFirstRegistration": "string",
+            "deliveryDate": "string",
+            "endOfWarranty": "string",
+            "objectId": "string",
+            "productionDate": "string",
+            "shipmentDate": "string",
+            "startOfWarranty": "string",
+            "technicalApprovalDate": "string",
+            "transferDate": "string",
+            "validSince": "string",
+            "value": "string"
+          },
+          "activeState": {
+            "checkDigitProductionNumber": "string",
+            "converterNumber": "string",
+            "delta": true,
+            "ehsnumber": "string",
+            "hiddenInvestigation": true,
+            "leadingMajAssy": true,
+            "lockIndicator": true,
+            "oil": "string",
+            "orderNumber": "string",
+            "plant": "string",
+            "productLiabilityComments": "string",
+            "productLiabilityIndicator": true,
+            "productionNumber": "string",
+            "retrofittedFrom": "string",
+            "retrofittedTo": "string",
+            "scrapComments": "string",
+            "scrapDate": "string",
+            "status": "string",
+            "theftRelevantPartsUnlocked": true,
+            "transmissionModel": "string",
+            "value": "string"
+          },
+          "activeVehicle": "string",
+          "checkDigit": "string",
+          "dataCardAvailable": true,
+          "delta": true,
+          "descriptions": [
+            {
+              "language": "string",
+              "type": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "lastModificationByPlant": "string",
+          "modelDesignation": "string",
+          "objectNumber": "string",
+          "objectNumberVariant": "string",
+          "technicalState": "string",
+          "variantInfoAvailable": true
+        },
+        "transferCaseObjectNo": "string",
+        "transferCaseSerialNo": "string",
+        "transmission": {
+          "activeAssignedFpd": {
+            "equipmentCodes": [
+              {
+                "code": "string",
+                "codeType": "string",
+                "delta": true,
+                "descriptions": [
+                  {
+                    "language": "string",
+                    "type": "string",
+                    "value": "string"
+                  }
+                ],
+                "designation": "string",
+                "productGroupIndication": "string",
+                "source": "string",
+                "value": "string"
+              }
+            ],
+            "saa": [
+              {
+                "amountPerSaa": "string",
+                "delta": true,
+                "description": "string",
+                "designGroup": [
+                  "string"
+                ],
+                "saaDesignation": "string",
+                "indicatorASRelevance": true,
+                "source": "string",
+                "typeIndicator": "string",
+                "value": "string"
+              }
+            ]
+          },
+          "activeProductDate": {
+            "ckdApprovalDate": "string",
+            "confirmationDate": "string",
+            "dateOfFirstRegistration": "string",
+            "deliveryDate": "string",
+            "endOfWarranty": "string",
+            "objectId": "string",
+            "productionDate": "string",
+            "shipmentDate": "string",
+            "startOfWarranty": "string",
+            "technicalApprovalDate": "string",
+            "transferDate": "string",
+            "validSince": "string",
+            "value": "string",
+            "xmlId": "string"
+          },
+          "activeState": {
+            "checkDigitProductionNumber": "string",
+            "converterNumber": "string",
+            "delta": true,
+            "ehsnumber": "string",
+            "fieldOrganisationText": [
+              {
+                "authorId": "string",
+                "automaticallyGenerated": true,
+                "date": "string",
+                "deleted": true,
+                "designGroup": [
+                  "string"
+                ],
+                "objectId": "string",
+                "positionNumber": "string",
+                "source": "string",
+                "textContent": "string"
+              }
+            ],
+            "hiddenInvestigation": true,
+            "leadingMajAssy": true,
+            "lockIndicator": true,
+            "oil": "string",
+            "orderNumber": "string",
+            "plant": "string",
+            "productLiabilityComments": "string",
+            "productLiabilityIndicator": true,
+            "productionNumber": "string",
+            "retrofittedFrom": "string",
+            "retrofittedTo": "string",
+            "scrapComments": "string",
+            "scrapDate": "string",
+            "status": "string",
+            "theftRelevantPartsUnlocked": true,
+            "transmissionModel": "string",
+            "value": "string"
+          },
+          "activeVehicle": "string",
+          "checkDigit": "string",
+          "dataCardAvailable": true,
+          "delta": true,
+          "descriptions": [
+            {
+              "language": "string",
+              "type": "string",
+              "value": "string"
+            }
+          ],
+          "id": "string",
+          "lastModificationByPlant": "string",
+          "modelDesignation": "string",
+          "objectNumber": "string",
+          "objectNumberVariant": "string",
+          "technicalState": "string",
+          "typeOf": "transmission",
+          "variantInfoAvailable": true
+        },
+        "vin": "string",
+        "winch": "string",
+        "windscreenTransmission": "string",
+        "windscreenWiper": "string",
+        "specialPlantText": {
+          "id": "string",
+          "designation": {
+            "objectId": "string",
+            "requestedText": "string"
+          }
+        },
+        "specialPlantTextMasterData": [
+          {
+            "id": "string",
+            "designation": "string"
+          }
+        ]
+      },
+      "bodyType": "string",
+      "checkDigit": "string",
+      "delta": true,
+      "descriptions": [
+        {
+          "language": "string",
+          "type": "string",
+          "value": "string"
+        }
+      ],
+      "fin": "string",
+      "fixingPartsAvailable": "string",
+      "lastModificationByPlant": "string",
+      "prodOrderTextAvailable": "string",
+      "productGroupIndication": "string",
+      "productSeries": "string",
+      "productSeriesBrand": "string",
+      "productSeriesDesignation": "string",
+      "technicalState": "string",
+      "vehicleModelDescription": "string",
+      "vehicleModelDesignation": "string"
+    }
+  },
+  "reference": {
+    "company": {
+      "id": "string",
+      "designation": "Unknown"
+    },
+    "productgroup": {
+      "id": 0,
+      "designation": "Unknown",
+      "type": {
+        "id": "string",
+        "designation": "string"
+      }
+    }
+  },
+  "version": "string"
+}

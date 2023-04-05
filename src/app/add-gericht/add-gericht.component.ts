@@ -31,6 +31,9 @@ export class AddGerichtComponent{
         try{
           const result = await firstValueFrom(this.http.post<any>("/gericht", this.newGericht, {withCredentials: true}))
           alert(result.name)
+          this.newGericht.name = "";
+          this.newGericht.preis = 0;
+          
         }catch(error)
         {
             alert((error as Error).message)

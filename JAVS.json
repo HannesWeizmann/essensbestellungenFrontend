@@ -1,0 +1,488 @@
+{
+  "commonComment": "string",
+  "configuration": {
+    "body": {
+      "code": "string",
+      "text": "string"
+    },
+    "bodyGroup": {
+      "code": "string",
+      "text": "string"
+    },
+    "bodyMass": {
+      "height": 0,
+      "length": 0,
+      "volumeCubicMeter": 0,
+      "volumeLiter": 0,
+      "width": 0
+    },
+    "brand": {
+      "code": "string",
+      "text": "string"
+    },
+    "cabin": {
+      "code": "string",
+      "text": "string"
+    },
+    "cabinInfo": {
+      "cabinBase": {
+        "code": "string",
+        "text": "string"
+      },
+      "cabinBottom": {
+        "code": "string",
+        "text": "string"
+      },
+      "cabinCombined": {
+        "code": "string",
+        "text": "string"
+      },
+      "cabinType": {
+        "code": "string",
+        "text": "string"
+      },
+      "cabinWidth": {
+        "code": "string",
+        "text": "string"
+      }
+    },
+    "engine": {
+      "code": "string",
+      "text": "string"
+    },
+    "engineConcept": {
+      "code": "string",
+      "text": "string"
+    },
+    "equipment": [
+      {
+        "desc": {
+          "code": "string",
+          "text": "string"
+        },
+        "group": {
+          "code": "string",
+          "text": "string"
+        },
+        "price": {
+          "basePrice": 0,
+          "currency": "string",
+          "currencyType": "string",
+          "taxInformation": [
+            {
+              "amount": 0,
+              "baseAmount": 0,
+              "rate": 0,
+              "type": "string"
+            }
+          ],
+          "totalPrice": 0
+        }
+      }
+    ],
+    "paintPrimary": {
+      "baseColor": {
+        "code": "string",
+        "text": "string"
+      },
+      "color": {
+        "code": "string",
+        "text": "string"
+      },
+      "price": {
+        "basePrice": 0,
+        "currency": "string",
+        "currencyType": "string",
+        "taxInformation": [
+          {
+            "amount": 0,
+            "baseAmount": 0,
+            "rate": 0,
+            "type": "string"
+          }
+        ],
+        "totalPrice": 0
+      },
+      "type": {
+        "code": "string",
+        "text": "string"
+      },
+      "variant": "string"
+    },
+    "paintSecondary": {
+      "baseColor": {
+        "code": "string",
+        "text": "string"
+      },
+      "color": {
+        "code": "string",
+        "text": "string"
+      },
+      "price": {
+        "basePrice": 0,
+        "currency": "string",
+        "currencyType": "string",
+        "taxInformation": [
+          {
+            "amount": 0,
+            "baseAmount": 0,
+            "rate": 0,
+            "type": "string"
+          }
+        ],
+        "totalPrice": 0
+      },
+      "type": {
+        "code": "string",
+        "text": "string"
+      },
+      "variant": "string"
+    },
+    "salesClass": {
+      "code": "string",
+      "text": "string"
+    },
+    "steering": {
+      "code": "string",
+      "text": "string"
+    },
+    "suspension": {
+      "code": "string",
+      "text": "string"
+    },
+    "upholstery": {
+      "baseColor": {
+        "code": "string",
+        "text": "string"
+      },
+      "color": {
+        "code": "string",
+        "text": "string"
+      },
+      "price": {
+        "basePrice": 0,
+        "currency": "string",
+        "currencyType": "string",
+        "taxInformation": [
+          {
+            "amount": 0,
+            "baseAmount": 0,
+            "rate": 0,
+            "type": "string"
+          }
+        ],
+        "totalPrice": 0
+      },
+      "type": {
+        "code": "string",
+        "text": "string"
+      },
+      "variant": "string"
+    }
+  },
+  "createdAt": "2023-03-28T09:40:24.731Z",
+  "damageComment": "string",
+  "fin": "string",
+  "location": {
+    "centerId": "string"
+  },
+  "media": {
+    "mediaItems": [
+      {
+        "dimension": "string",
+        "index": 0,
+        "perspective": "string",
+        "provider": "string",
+        "source": "string",
+        "type": "string",
+        "url": "string",
+        "visibility": "string"
+      }
+    ],
+    "numberOfImages": 0,
+    "numberOfVideos": 0
+  },
+  "orderNumber": "string",
+  "owner": {
+    "centerId": "string"
+  },
+  "priceInformation": {
+    "newPrice": {
+      "basePrice": 0,
+      "currency": "string",
+      "currencyType": "string",
+      "taxInformation": [
+        {
+          "amount": 0,
+          "baseAmount": 0,
+          "rate": 0,
+          "type": "string"
+        }
+      ],
+      "totalPrice": 0
+    },
+    "offerPrice": {
+      "basePrice": 0,
+      "currency": "string",
+      "currencyType": "string",
+      "taxInformation": [
+        {
+          "amount": 0,
+          "baseAmount": 0,
+          "rate": 0,
+          "type": "string"
+        }
+      ],
+      "totalPrice": 0
+    },
+    "retailOfferPrice": {
+      "basePrice": 0,
+      "currency": "string",
+      "currencyType": "string",
+      "taxInformation": [
+        {
+          "amount": 0,
+          "baseAmount": 0,
+          "rate": 0,
+          "type": "string"
+        }
+      ],
+      "totalPrice": 0
+    },
+    "salesPrice": {
+      "basePrice": 0,
+      "currency": "string",
+      "currencyType": "string",
+      "taxInformation": [
+        {
+          "amount": 0,
+          "baseAmount": 0,
+          "rate": 0,
+          "type": "string"
+        }
+      ],
+      "totalPrice": 0
+    },
+    "tradeInPrice": {
+      "basePrice": 0,
+      "currency": "string",
+      "currencyType": "string",
+      "taxInformation": [
+        {
+          "amount": 0,
+          "baseAmount": 0,
+          "rate": 0,
+          "type": "string"
+        }
+      ],
+      "totalPrice": 0
+    }
+  },
+  "productionYear": 0,
+  "salesDescription": "string",
+  "salesDescriptionShort": "string",
+  "sftpAttributes": {
+    "sftpModelRange": {
+      "code": "string",
+      "text": "string"
+    },
+    "sftpProductGroup": {
+      "code": "string",
+      "text": "string"
+    },
+    "sftpSubCategory": {
+      "code": "string",
+      "text": "string"
+    },
+    "sftpTypeOfApplication": {
+      "code": "string",
+      "text": "string"
+    }
+  },
+  "status": {
+    "salesDate": "2023-03-28T09:40:24.731Z",
+    "status": {
+      "code": "string",
+      "text": "string"
+    },
+    "takeInAt": "2023-03-28T09:40:24.731Z"
+  },
+  "stockNumber": "string",
+  "technicalData": {
+    "axisLoad": [
+      {
+        "load": 0,
+        "number": 0
+      }
+    ],
+    "emissionStandard": {
+      "code": "string",
+      "text": "string"
+    },
+    "enginePrimary": {
+      "batteryData": {
+        "capacity": 0,
+        "chargingTime": 0,
+        "type": "string"
+      },
+      "consumption": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "consumptionMaximum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "consumptionMinimum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "cubicCapacity": 0,
+      "cylinderData": {
+        "capacity": 0,
+        "number": 0
+      },
+      "emission": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "emissionMaximum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "emissionMinimum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "engineType": {
+        "code": "string",
+        "text": "string"
+      },
+      "fuelTankCapacity": 0,
+      "fuelType": {
+        "code": "string",
+        "text": "string"
+      },
+      "powerData": {
+        "powerKw": 0,
+        "powerPs": 0,
+        "range": 0,
+        "torque": 0
+      }
+    },
+    "engineSecondary": {
+      "batteryData": {
+        "capacity": 0,
+        "chargingTime": 0,
+        "type": "string"
+      },
+      "consumption": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "consumptionMaximum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "consumptionMinimum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "cubicCapacity": 0,
+      "cylinderData": {
+        "capacity": 0,
+        "number": 0
+      },
+      "emission": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "emissionMaximum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "emissionMinimum": {
+        "combined": 0,
+        "extraUrban": 0,
+        "unit": "string",
+        "urban": 0
+      },
+      "engineType": {
+        "code": "string",
+        "text": "string"
+      },
+      "fuelTankCapacity": 0,
+      "fuelType": {
+        "code": "string",
+        "text": "string"
+      },
+      "powerData": {
+        "powerKw": 0,
+        "powerPs": 0,
+        "range": 0,
+        "torque": 0
+      }
+    },
+    "weightGross": 0,
+    "weightKerb": 0,
+    "weightPayload": 0,
+    "wheelbase": 0,
+    "wheelform": {
+      "code": "string",
+      "text": "string"
+    }
+  },
+  "ucNumber": "string",
+  "ucNumberTrailer": "string",
+  "updatedAt": "2023-03-28T09:40:24.732Z",
+  "usedVehicleData": {
+    "damagesRepairedFlag": true,
+    "firstRegistrationDate": "2023-03-28T09:40:24.732Z",
+    "licensePlateNumber": "string",
+    "mileage": 0,
+    "mileageExchangeEngine": 0,
+    "numberPreviousOwners": 0,
+    "previousDamagesFlag": true,
+    "tireCondition": {
+      "spareCondition": 0,
+      "tireSets": [
+        {
+          "axisPosition": 0,
+          "leftIn": 0,
+          "leftOut": 0,
+          "rightIn": 0,
+          "rightOut": 0
+        }
+      ],
+      "totalCondition": 0
+    },
+    "totalCondition": {
+      "code": "string",
+      "text": "string"
+    }
+  },
+  "vehicleCategory": "string",
+  "vin": "string"
+}
