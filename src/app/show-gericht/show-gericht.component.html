@@ -1,0 +1,13 @@
+
+<div class="showGerichtWrapper">
+    <button mat-raised-button color="primary" (click) = "reload()">Reload</button>
+    <mat-card *ngFor="let gericht of (gerichte|async)" >
+        <mat-card-content>
+        <p>{{gericht.name}}
+            <button mat-raised-button color="primary" class="del-btn" (click) ="delete(gericht.id)">Löschen</button>
+        </p>
+        <p>{{gericht.preis + "€"}}</p>
+        </mat-card-content>
+        <mat-card-footer>{{ errorMessage }}</mat-card-footer>
+    </mat-card>
+</div>

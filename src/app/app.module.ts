@@ -19,6 +19,8 @@ import { AssignedUsersFormFieldComponent } from './shared/assigned-users-form-fi
 import { AdminportalComponent } from './adminportal/adminportal.component';
 import { AddGerichtComponent } from './add-gericht/add-gericht.component';
 import { AddDayComponent } from './add-day/add-day.component';
+import { GerichtVerwaltungComponent } from './gericht-verwaltung/gericht-verwaltung.component';
+import { ShowGerichtComponent } from './show-gericht/show-gericht.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { AddDayComponent } from './add-day/add-day.component';
     AssignedUsersFormFieldComponent,
     AdminportalComponent,
     AddGerichtComponent,
-    AddDayComponent
+    AddDayComponent,
+    GerichtVerwaltungComponent,
+    ShowGerichtComponent
   ],
   imports: [
     BrowserModule,

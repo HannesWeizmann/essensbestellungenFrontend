@@ -1,22 +1,29 @@
-<button mat-stroked-button color="primary" class="btn-block" (click) = "navigateBack();" >Zurück</button>
-<mat-card-header>
-    <mat-card-title>Gericht hinzufügen</mat-card-title>
-</mat-card-header>
-<form>
-    <mat-card-content>
-        <mat-form-field>
-            <input [(ngModel)]="newGericht.name" name="name" matInput placeholder="Name">
-        </mat-form-field>
-        <mat-form-field>
-            <input [(ngModel)]="newGericht.preis" type="number" matInput placeholder="Preis" name="preis">
-        </mat-form-field>
+
+<div class="form-wrapper">
+    <mat-card-header>
+        <mat-card-title>Gericht hinzufügen</mat-card-title>
+    </mat-card-header>
+    <form>
+        <mat-card-content>
+            <mat-form-field>
+                <input [(ngModel)]="newGericht.name" name="name" matInput placeholder="Name">
+            </mat-form-field>
+            <mat-form-field>
+                <input [(ngModel)]="newGericht.preis" type="number" matInput placeholder="Preis" name="preis">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Kategorie</mat-label>
+                <br>
+                <mat-select [(ngModel)]="newGericht.kategorie" name="kategorie" class="selectKategorie" >
+                    <mat-option value=0>Menü</mat-option>
+                    <mat-option value=1>Nachtisch</mat-option>
+                    <mat-option value=2>Suppe</mat-option>
+                </mat-select>
+            </mat-form-field>
+        
+        </mat-card-content>
         <br>
-        <mat-label>Kategorie</mat-label>
-        <mat-select [(ngModel)]="newGericht.kategorie" name="kategorie" >
-                <mat-option value=0>Menü</mat-option>
-                <mat-option value=1>Nachtisch</mat-option>
-                <mat-option value=2>Suppe</mat-option>
-              </mat-select>
-    </mat-card-content>
-    <button mat-stroked-button color="primary" class="btn-block" (click) = "addGericht()">Speichern</button>
-</form>
+        <button mat-raised-button color="primary" class="btn-block" (click) = "addGericht()">Speichern</button>
+    </form>
+</div>

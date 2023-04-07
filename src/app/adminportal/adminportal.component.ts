@@ -16,8 +16,8 @@ export class AdminportalComponent {
     private readonly authService: AuthService,
   ) {}
 
-    async navigateToCreateGericht(){
-      await this.router.navigate(["/addGericht"])
+    async navigateToGerichtVerwaltung(){
+      await this.router.navigate(["/gerichtVerwaltung"])
     }
 
     async navigateToCreateSpeisseplan(){
