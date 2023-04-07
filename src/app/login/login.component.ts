@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     if (this.authService.hasAccessToken()) {
-      await this.router.navigate(["/profile"]);
+      await this.router.navigate(["/adminportal"]);
     }
   }
 
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     try {
       const result = await firstValueFrom(this.http.post<{ access_token: string, userId: string }>("/auth/login", this.userToLogin));
       this.authService.setAccessToken(result.access_token, result.userId);
-      await this.router.navigate(["/profile"]);
+      await this.router.navigate(["/adminportal"]);
     } catch (error) {
       this.errorMessage = (error as Error).message;
     }
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
       const result = await firstValueFrom(this.http.post<{User: string, msg: string}>("/users/login", this.userToLogin,{ withCredentials: true}))
       //this.http.get<any>('/users/protected',{ withCredentials: true}).subscribe((data: any) => {alert(data.msg)});
       alert(result.msg)
-      await this.router.navigate(["/profile"]);
+      await this.router.navigate(["/adminportal"]);
     }catch(error){
         this.errorMessage = (error as Error).message;
     }

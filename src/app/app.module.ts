@@ -5,17 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
-import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TransactionsComponent } from './transactions/transactions.component';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppHttpClient } from './shared/http-client.service';
 import { AuthService } from './shared/auth.service';
 import { UserService } from './shared/user.service';
-import { UserManagementComponent } from './user-management/user-management.component';
-import { AssignedUsersFormFieldComponent } from './shared/assigned-users-form-field/assigned-users-form-field.component';
 import { AdminportalComponent } from './adminportal/adminportal.component';
 import { AddGerichtComponent } from './add-gericht/add-gericht.component';
 import { AddDayComponent } from './add-day/add-day.component';
@@ -26,10 +22,6 @@ import { AddDayComponent } from './add-day/add-day.component';
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    ProfileComponent,
-    TransactionsComponent,
-    UserManagementComponent,
-    AssignedUsersFormFieldComponent,
     AdminportalComponent,
     AddGerichtComponent,
     AddDayComponent
