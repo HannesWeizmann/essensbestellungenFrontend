@@ -3,7 +3,7 @@
     flex-flow: column;
     height: 100%;
     margin: 0;
-    background-color: lightgray;
+    background-color: lightgrey;
   }
   
   .box .row {
@@ -24,8 +24,4 @@
     flex: 1 1 auto;
     padding: 1rem;
   }
-  
-  .box .row.footer {
-    flex: 0 1 40px;
-    padding: 1rem;
-  }
+

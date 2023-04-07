@@ -1,6 +1,6 @@
 
 <div class="showGerichtWrapper">
-    <button mat-raised-button color="primary" (click) = "reload()">Reload</button>
+    <button mat-raised-button class="btn-block" (click) = "reload()">Reload</button>
     <mat-card *ngFor="let gericht of (gerichte|async)" >
         <mat-card-content>
         <p>{{gericht.name}}

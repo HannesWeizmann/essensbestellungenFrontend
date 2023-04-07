@@ -12,7 +12,7 @@
             <input [(ngModel)]="userToLogin.password" name="password" matInput placeholder="Password" type="password">
           </mat-form-field>
         </mat-card-content>
-        <button mat-stroked-button color="primary" class="btn-block" (click)="login(); userToLogin.password = '';">Log in</button>
+        <button mat-stroked-button class="btn-block" (click)="login(); userToLogin.password = '';">Log in</button>
       </form>
     <mat-card-footer>{{ errorMessage }}</mat-card-footer>
     </mat-card>
