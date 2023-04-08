@@ -4,7 +4,7 @@
     <mat-card *ngFor="let gericht of (gerichte|async)" >
         <mat-card-content>
         <p>{{gericht.name}}
-            <button mat-raised-button color="primary" class="del-btn" (click) ="delete(gericht.id)">Löschen</button>
+            <button mat-raised-button class="del-btn" (click) ="delete(gericht.id)">Löschen</button>
         </p>
         <p>{{gericht.preis + "€"}}</p>
         </mat-card-content>

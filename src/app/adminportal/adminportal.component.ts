@@ -23,4 +23,8 @@ export class AdminportalComponent {
     async navigateToCreateSpeisseplan(){
       await this.router.navigate(["/addGericht"])
     }
+
+    async navigateBack(){
+      this.router.navigate(['/speiseplan'])
+    }
 }

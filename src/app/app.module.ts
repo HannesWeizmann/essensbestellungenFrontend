@@ -17,6 +17,8 @@ import { AddGerichtComponent } from './add-gericht/add-gericht.component';
 import { AddDayComponent } from './add-day/add-day.component';
 import { GerichtVerwaltungComponent } from './gericht-verwaltung/gericht-verwaltung.component';
 import { ShowGerichtComponent } from './show-gericht/show-gericht.component';
+import { SpeiseplanComponent} from './speiseplan/speiseplan.component'
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { ShowGerichtComponent } from './show-gericht/show-gericht.component';
     AddGerichtComponent,
     AddDayComponent,
     GerichtVerwaltungComponent,
-    ShowGerichtComponent
+    ShowGerichtComponent,
+    SpeiseplanComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
