@@ -10,12 +10,13 @@ import { AppHttpClient } from '../shared/http-client.service';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-  userToSignUp: { username: string, 
+  userToSignUp: { username: string,
+                  email: string 
                   firstname: string, 
                   lastname: string, 
                   personalnummer: string, 
                   password: string
-                  role: string } = { username: "", firstname: "", lastname: "", personalnummer: "", password: "", role: "" };
+                  role: string } = { username: "", email: "", firstname: "", lastname: "", personalnummer: "", password: "", role: "" };
   errorMessage: string = "";
   
   constructor(
