@@ -5,6 +5,7 @@ import { AuthService } from '../shared/auth.service';
 import { AppHttpClient } from '../shared/http-client.service';
 import { HttpHeaders } from '@angular/common/http';
 import { stringify } from 'qs';
+import { Auth } from '../guards/auth';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,11 @@ import { stringify } from 'qs';
 export class LoginComponent implements OnInit {
   userToLogin: { username: string, password: string } = { username: "", password: "" };
   errorMessage: string = "";
+  public auth: Auth = new Auth();
+
+  getRole():string{
+    return "Aaaaa"
+  }
   
   constructor(
     private readonly http: AppHttpClient,
@@ -41,9 +47,10 @@ export class LoginComponent implements OnInit {
   async login(){
        
     try{
-      const result = await firstValueFrom(this.http.post<{User: string, msg: string}>("/users/login", this.userToLogin,{ withCredentials: true}))
-      //this.http.get<any>('/users/protected',{ withCredentials: true}).subscribe((data: any) => {alert(data.msg)});
-      alert(result.msg)
+      //const result = await firstValueFrom(this.http.post<{User: string, msg: string}>("/users/login", this.userToLogin,{ withCredentials: true}))
+      const result = await firstValueFrom(this.http.post<{User: {userId: string, username: string, role: string}, msg: string}>("/users/login", this.userToLogin,{ withCredentials: true}))
+      this.auth.setRole(result.User.role);
+      this.auth.setUsername(result.User.username);
       await this.router.navigate(["/speiseplan"]);
     }catch(error){
         this.errorMessage = (error as Error).message;

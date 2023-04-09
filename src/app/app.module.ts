@@ -19,7 +19,7 @@ import { GerichtVerwaltungComponent } from './gericht-verwaltung/gericht-verwalt
 import { ShowGerichtComponent } from './show-gericht/show-gericht.component';
 import { SpeiseplanComponent} from './speiseplan/speiseplan.component'
 import { SignUpComponent } from './sign-up/sign-up.component';
-
+import {AdminGuard} from 'src/app/guards/adminGuard';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [AppHttpClient, AuthService, UserService],
+  providers: [AppHttpClient, AuthService, UserService, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
