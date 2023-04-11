@@ -49,7 +49,8 @@ export class ShowGerichtComponent {
 
   async delete(id: string |undefined){
     try {
-      const result = await firstValueFrom(this.http.delete('http://localhost:3000/gericht'+ id,{ withCredentials: true}))
+      const result = await firstValueFrom(this.http.delete('http://localhost:3000/gericht/'+ id,{ withCredentials: true}))
+      this.reload();
     } catch (error) {
       this.errorMessage = (error as Error).message;
     }

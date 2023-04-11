@@ -1,7 +1,7 @@
 import {Kategorie} from './kategorie'
 
 export class Gericht{
-    id: string | undefined;
+    _id: string | undefined;
     name: string;
     preis: number;
     kategorie: Kategorie;
