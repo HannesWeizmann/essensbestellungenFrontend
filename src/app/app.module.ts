@@ -20,6 +20,7 @@ import { ShowGerichtComponent } from './show-gericht/show-gericht.component';
 import { SpeiseplanComponent} from './speiseplan/speiseplan.component'
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {AdminGuard} from 'src/app/guards/adminGuard';
+import { UserGuard } from './guards/userGuard';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import {AdminGuard} from 'src/app/guards/adminGuard';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [AppHttpClient, AuthService, UserService, AdminGuard],
+  providers: [AppHttpClient, AuthService, UserService, AdminGuard, UserGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

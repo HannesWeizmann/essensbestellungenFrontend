@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
-const ROLE = "user"; 
+const ROLE = "nouser"; 
 const USERNAME = "";
 
 @Injectable()
 export class Auth{
-    private role: string = localStorage.getItem(ROLE) || "user";
+    private role: string = localStorage.getItem(ROLE) || "nouser";
     private username: string = localStorage.getItem(USERNAME) || "";
 
     constructor(){}
@@ -16,7 +16,7 @@ export class Auth{
     }
 
     getRole(): string{
-        let role:string = localStorage.getItem(ROLE) || "user";
+        let role:string = localStorage.getItem(ROLE) || "nouser";
         return role;
     }
 
