@@ -16,7 +16,7 @@ export class SignUpComponent implements OnInit {
                   lastname: string, 
                   personalnummer: string, 
                   password: string
-                  role: string } = { username: "", email: "", firstname: "", lastname: "", personalnummer: "", password: "", role: "" };
+                  role: string } = { username: "", email: "", firstname: "", lastname: "", personalnummer: "", password: "", role: "user" };
   errorMessage: string = "";
   
   constructor(
