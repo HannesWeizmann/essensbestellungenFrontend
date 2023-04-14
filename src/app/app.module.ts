@@ -21,6 +21,7 @@ import { SpeiseplanComponent} from './speiseplan/speiseplan.component'
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {AdminGuard} from 'src/app/guards/adminGuard';
 import { UserGuard } from './guards/userGuard';
+import { SpeiseplanErstellenComponent } from './speiseplan-erstellen/speiseplan-erstellen.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UserGuard } from './guards/userGuard';
     GerichtVerwaltungComponent,
     ShowGerichtComponent,
     SpeiseplanComponent,
-    SignUpComponent
+    SignUpComponent,
+    SpeiseplanErstellenComponent
   ],
   imports: [
     BrowserModule,

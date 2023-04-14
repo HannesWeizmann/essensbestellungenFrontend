@@ -6,16 +6,6 @@ import { firstValueFrom } from 'rxjs';
 
 
 
-interface GerichtHttpResponse{
-  gerichte: Gericht[];
-}
-
-enum Kategorie{
-  menu,
-  nachtisch,
-  suppe,
-}
-
 @Component({
   selector: 'app-show-gericht',
   templateUrl: './show-gericht.component.html',
@@ -24,7 +14,6 @@ enum Kategorie{
 export class ShowGerichtComponent {
 
   public gerichte: Observable<Gericht[]> |undefined;
-  list = [{name: "philipp"}]
   errorMessage: string = "";
   
 

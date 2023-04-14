@@ -9,6 +9,7 @@ import {SpeiseplanComponent} from './speiseplan/speiseplan.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import { AdminGuard } from './guards/adminGuard';
 import { UserGuard } from './guards/userGuard';
+import {SpeiseplanErstellenComponent} from './speiseplan-erstellen/speiseplan-erstellen.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: "gerichtVerwaltung", component: GerichtVerwaltungComponent, canActivate:[AdminGuard]},
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "speiseplan", component: SpeiseplanComponent, canActivate:[UserGuard]},
+  { path: "speiseplanErstellen", component: SpeiseplanErstellenComponent, canActivate:[AdminGuard]},
   { path: "sign-up", component: SignUpComponent}
   
 ];

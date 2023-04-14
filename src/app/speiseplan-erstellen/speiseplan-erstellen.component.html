@@ -1,0 +1,25 @@
+
+<div class="listWrapper">
+    <mat-card *ngFor="let day of days ; let i = index"  class="date-card">
+        <mat-card-content>
+        <p>{{i +1 }} - {{day.date}}
+                <button mat-raised-button class="bearbeiten-btn" (click)="setTag(day.date)">Bearbeiten</button>
+                <button mat-raised-button class="bearbeiten-btn" (click)="delete(day._id)">Löschen</button>
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+<div class="bearbeiten-wrapper">
+    <mat-card-header>
+    <mat-card-title>Bearbeiten von Tag : {{tag.date}}</mat-card-title>
+    </mat-card-header>
+    <form>
+        <mat-card-content>
+            <mat-form-field>
+                <input name="name" matInput placeholder="Name">
+            </mat-form-field>
+        </mat-card-content>
+    </form>
+</div>
