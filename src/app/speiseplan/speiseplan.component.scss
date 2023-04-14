@@ -2,6 +2,15 @@
     float: right;
 }
 
+.speiseplanmitformular {
+    display: flex;
+  }
+  
+  .speiseplan-wrapper, .bestellformular-wrapper {
+    width: 50%;
+    height: 200px;
+  }
+
 mat-card{
     background-color: white;
     width: fit-content;
@@ -63,3 +72,17 @@ th, td {
     color: white;
     background-color: darkblue;
 }
+
+
+mat-checkbox {
+    background-color: rgb(73, 72, 72);
+  }
+  
+  mat-form-field, mat-checkbox {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  
+  

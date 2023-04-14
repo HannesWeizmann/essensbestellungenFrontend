@@ -9,6 +9,11 @@ import {Auth} from 'src/app/guards/auth';
 export class SpeiseplanComponent implements OnInit {
   private auth: Auth = new Auth();
   public username = "";
+  tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  selectedTag: string | undefined;
+  selectedMenu: string | undefined;
+  hasNachtisch: boolean = false;
+  hasSuppe: boolean = false;
 
   //variablen nicht final nur zum designen
   public datum = "14.04.2023-21.04.2023";
@@ -51,6 +56,9 @@ export class SpeiseplanComponent implements OnInit {
     //zurück navigieren können
   }
   
+  submitBestellung() {
+    // TODO: Implement logic to submit order to server
+  }
 
   ngOnInit(): void {
 

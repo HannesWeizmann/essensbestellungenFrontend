@@ -1,5 +1,7 @@
 <p class="user">Angemeldet als: {{username}}</p>
+<br><br>
 
+<div class="speiseplanmitformular">
 <div class="speiseplan-wrapper">
 <mat-card>
     <mat-card-header>
@@ -63,14 +65,48 @@
         <br>
         HINWEISE:
         <br>
-        - erster Hinweis
+        - Menü 2 ist auch als vegetarische Variante zu erhalten
         <br>
-        - zweiter Hinweis
+        - Samstags wird nur Menü 2 und Nachtisch angeboten
       </mat-card-footer>
     </mat-card-content>
   </mat-card>
-</div>
-<br>
+  <br>
 <button  mat-raised-button class="btn-back" (click) = "vorherigeWoche();" >Vorherige Woche</button>
 &nbsp;
 <button  mat-raised-button class="btn-back" (click) = "naechsteWoche();" >Nächste Woche</button>
+</div>
+
+
+<div class="bestellformular-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Bestellung aufgeben</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Tag auswählen</mat-label>
+        <mat-select [(ngModel)]="selectedTag">
+          <mat-option *ngFor="let tag of tage" [value]="tag">{{tag}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <mat-form-field *ngIf="selectedTag !== 'Samstag'">
+        <mat-label>Menü 1 oder Menü 2?</mat-label>
+        <mat-select [(ngModel)]="selectedMenu">
+          <mat-option value="Menü 1">Menü 1</mat-option>
+          <mat-option value="Menü 2">Menü 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      &nbsp;
+      <mat-checkbox [(ngModel)]="hasNachtisch">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
+      &nbsp;
+      <mat-checkbox [(ngModel)]="hasSuppe">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
+
+      <mat-card-actions>
+        <button mat-raised-button class="btn-back" (click)="submitBestellung()">Bestellung aufgeben</button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>
+</div>
