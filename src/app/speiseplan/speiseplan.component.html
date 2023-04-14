@@ -1,2 +1,76 @@
 <p class="user">Angemeldet als: {{username}}</p>
-<p>speiseplan works!</p>
+
+<div class="speiseplan-wrapper">
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Speiseplan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{datum}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <thead>
+          <tr class="header-row">
+            <th></th>
+            <th>Montag</th>
+            <th>Dienstag</th>
+            <th>Mittwoch</th>
+            <th>Donnerstag</th>
+            <th>Freitag</th>
+            <th>Samstag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="menu1-row">
+            <th>Menü 1</th>
+            <td>{{menu1_montag}}</td>
+            <td>{{menu1_dienstag}}</td>
+            <td>{{menu1_mittwoch}}</td>
+            <td>{{menu1_donnerstag}}</td>
+            <td>{{menu1_freitag}}</td>
+            <td>{{menu1_samstag}}</td>
+          </tr>
+          <tr class="menu2-row">
+            <th>Menü 2</th>
+            <td>{{menu2_montag}}</td>
+            <td>{{menu2_dienstag}}</td>
+            <td>{{menu2_mittwoch}}</td>
+            <td>{{menu2_donnerstag}}</td>
+            <td>{{menu2_freitag}}</td>
+            <td>{{menu2_samstag}}</td>
+          </tr>
+          <tr class="nachtisch-row">
+            <th>Nachtisch</th>
+            <td>{{nachtisch_montag}}</td>
+            <td>{{nachtisch_dienstag}}</td>
+            <td>{{nachtisch_mittwoch}}</td>
+            <td>{{nachtisch_donnerstag}}</td>
+            <td>{{nachtisch_freitag}}</td>
+            <td>{{nachtisch_samstag}}</td>
+          </tr>
+          <tr class="suppe-row">
+            <th>Suppe</th>
+            <td>{{suppe_montag}}</td>
+            <td>{{suppe_dienstag}}</td>
+            <td>{{suppe_mittwoch}}</td>
+            <td>{{suppe_donnerstag}}</td>
+            <td>{{suppe_freitag}}</td>
+            <td>{{suppe_samstag}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-card-footer>
+        <br>
+        HINWEISE:
+        <br>
+        - erster Hinweis
+        <br>
+        - zweiter Hinweis
+      </mat-card-footer>
+    </mat-card-content>
+  </mat-card>
+</div>
+<br>
+<button  mat-raised-button class="btn-back" (click) = "vorherigeWoche();" >Vorherige Woche</button>
+&nbsp;
+<button  mat-raised-button class="btn-back" (click) = "naechsteWoche();" >Nächste Woche</button>
