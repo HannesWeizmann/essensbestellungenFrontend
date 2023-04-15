@@ -18,34 +18,34 @@ export class SpeiseplanComponent implements OnInit {
 
   //variablen nicht final nur zum designen
   public datum = "14.04.2023-21.04.2023";
-  public menu1_montag = "fleisch";
-  public menu2_montag = "";
-  public suppe_montag = "";
-  public nachtisch_montag = "";
+  public menu1_montag = "Nudeln a la Bolognese (Schwein/Rind) mit Käse";
+  public menu2_montag = "Maultaschen mit Kartfoffelsalat";
+  public suppe_montag = "Schokoladenpudding";
+  public nachtisch_montag = "Nudelsuppe";
 
-  public menu1_dienstag = "fisch";
-  public menu2_dienstag = "";
-  public suppe_dienstag = "";
-  public nachtisch_dienstag = "";
+  public menu1_dienstag = "Kesselgulasch mit Brötchen";
+  public menu2_dienstag = "Tiroler Burger mit Pommes";
+  public suppe_dienstag = "Dänische KnusperCreme";
+  public nachtisch_dienstag = "Bratknödelsuppe";
   
-  public menu1_mittwoch = "pizza";
-  public menu2_mittwoch = "";
-  public suppe_mittwoch = "";
-  public nachtisch_mittwoch= "";
+  public menu1_mittwoch = "Eisbeinfleisch mit Sauerkraut & Erbsenpüree";
+  public menu2_mittwoch = "Pasta mit frischem Gemüse und einr Tomaten-Mozarellasauce";
+  public suppe_mittwoch = "Obstsalat";
+  public nachtisch_mittwoch= "Kartoffelsuppe";
 
-  public menu1_donnerstag = "kartoffeln";
-  public menu2_donnerstag = "";
-  public suppe_donnerstag = "";
-  public nachtisch_donnerstag = "";
+  public menu1_donnerstag = "Dönerteller mit Pommes und Salat";
+  public menu2_donnerstag = "Grießbrei mit heißen Früchten";
+  public suppe_donnerstag = "Himbeer-Mascarpone Dessert";
+  public nachtisch_donnerstag = "Gemüsesuppe";
 
-  public menu1_freitag = "lasagne";
-  public menu2_freitag = "";
-  public suppe_freitag = "";
-  public nachtisch_freitag = "";
+  public menu1_freitag = "Schnitzel mit Rahmchampions & Rosmarinkartoffeln";
+  public menu2_freitag = "Paniertes Seelachsfilet mit Remouladensoße und Bratkartoffeln";
+  public suppe_freitag = "Vanilleeis mit Fürchten";
+  public nachtisch_freitag = "Grießklößchensuppe";
 
-  public menu1_samstag = "pudding";
-  public menu2_samstag = "";
-  public suppe_samstag = "";
+  public menu1_samstag = "";
+  public menu2_samstag = "Würstchengulasch mit Nudeln";
+  public suppe_samstag = "Erdbeerkuchen";
   public nachtisch_samstag = "";
 
   async naechsteWoche(){

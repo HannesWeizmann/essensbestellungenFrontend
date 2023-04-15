@@ -2,29 +2,23 @@
     float: right;
 }
 
-/*
-.speiseplanmitformular {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .speiseplan-wrapper, .bestellformular-wrapper {
-    width: 100%;
-    height: 200px;
-  }
-*/
 .speiseplanmitformular {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
+}
+
+.speiseplan-wrapper,
+.bestellformular-wrapper {
+  width: 100%;
+  max-width: 50%;
+  height: 200px;
+}
+
+@media (min-width: 768px) {
   .speiseplan-wrapper,
   .bestellformular-wrapper {
-    width: 100%;
-    max-width: 40%;
-    height: 200px;
-    box-sizing: border-box;
-    padding: 20px;
+    max-width: 28%;
   }
 }
 
@@ -39,48 +33,31 @@ mat-card-title {
     color: rgb(112, 189, 112);
 }
 
-table{
-    width: 100%; /* die Breite des gesamten Tabellenbereichs */
+th, td {
+  padding: 15px; 
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-th, td {
-    padding: 25px; /* Größe des Inhalts einstellen */
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-
 .header-row{
-    background-color: rgb(112, 189, 112);
+  background-color: rgb(112, 189, 112);
 }
 
 .menu1-row {
-    background-color: lightgrey;
-  }
+  background-color: lightgrey;
+}
 
-  .menu2-row {
-    background-color: rgb(112, 189, 112);
-  }
+.menu2-row {
+  background-color: rgb(112, 189, 112);
+}
 
-  .nachtisch-row {
-    background-color: lightgrey;
-  }
+.nachtisch-row {
+  background-color: lightgrey;
+}
 
-  .suppe-row {
-    background-color: rgb(112, 189, 112);
-  }
-
-
-  .menu1-row th, .menu2-row th, .nachtisch-row th, .suppe-row th {
-    width: 15%; /*Breite der Spalten einstellen */
-  }
-  
-  .menu1-row td, .menu2-row td, .nachtisch-row td {
-    height: 30px; /* Höhe der Zeilen einstellen */
-  }
-
-  .suppe-row td {
-    height: 15px;
-  }
+.suppe-row {
+  background-color: rgb(112, 189, 112);
+}
 
   mat-card-footer {
     color: rgb(112, 189, 112);
