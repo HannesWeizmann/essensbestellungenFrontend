@@ -99,7 +99,7 @@
         </mat-select>
       </mat-form-field>
       &nbsp;
-      <mat-checkbox *ngIf="selectedMenu === 'Menü 2'" [(ngModel)]="isVegetarisch">Vegetarisch&nbsp;&nbsp;</mat-checkbox>
+      <mat-checkbox *ngIf="selectedMenu === 'Menü 2' || selectedTag === 'Samstag'" [(ngModel)]="isVegetarisch">Vegetarisch&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
       <mat-checkbox [(ngModel)]="hasNachtisch">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
