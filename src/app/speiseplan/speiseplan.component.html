@@ -99,9 +99,11 @@
         </mat-select>
       </mat-form-field>
       &nbsp;
+      <mat-checkbox *ngIf="selectedMenu === 'Menü 2'" [(ngModel)]="isVegetarisch">Vegetarisch&nbsp;&nbsp;</mat-checkbox>
+      &nbsp;
       <mat-checkbox [(ngModel)]="hasNachtisch">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
-      <mat-checkbox [(ngModel)]="hasSuppe">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
+      <mat-checkbox *ngIf="selectedTag !== 'Samstag'"[(ngModel)]="hasSuppe">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
 
       <mat-card-actions>
         <button mat-raised-button class="btn-back" (click)="submitBestellung()">Bestellung aufgeben</button>

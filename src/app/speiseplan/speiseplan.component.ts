@@ -10,10 +10,11 @@ export class SpeiseplanComponent implements OnInit {
   private auth: Auth = new Auth();
   public username = "";
   tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
-  selectedTag: string | undefined;
-  selectedMenu: string | undefined;
-  hasNachtisch: boolean = false;
-  hasSuppe: boolean = false;
+  selectedTag: string = '';
+  selectedMenu: string = '';
+  hasNachtisch = false;
+  hasSuppe = false;
+  isVegetarisch = false;
 
   //variablen nicht final nur zum designen
   public datum = "14.04.2023-21.04.2023";
@@ -57,7 +58,40 @@ export class SpeiseplanComponent implements OnInit {
   }
   
   submitBestellung() {
-    // TODO: Implement logic to submit order to server
+    if (!this.selectedTag) {
+      alert("Bitte wählen Sie einen Tag aus.");
+      return;
+    }
+    
+  // automatisch Menü 2 auswählen und Suppe deaktivieren, wenn Samstag ausgewählt wurde
+  if (this.selectedTag === 'Samstag') {
+    this.selectedMenu = 'Menü 2';
+    this.hasSuppe = false;
+  } else if (!this.selectedMenu) {
+    alert("Bitte wählen Sie ein Menü aus.");
+    return;
+  }
+    
+    // Erstellen eines Bestellungs-Objekts
+    const bestellung = {
+      tag: this.selectedTag,
+      menu: this.selectedMenu || null,
+      nachtisch: this.hasNachtisch,
+      suppe: this.hasSuppe,
+      vegetarisch: this.isVegetarisch
+    };
+    
+    //Code, der die Bestellung an den Server sendet oder lokal speichert
+    // ...
+  
+    // Rücksetzen des Formulars
+    this.selectedTag = '';
+    this.selectedMenu = '';
+    this.hasNachtisch = false;
+    this.hasSuppe = false;
+    this.isVegetarisch = false;
+  
+    alert("Ihre Bestellung wurde erfolgreich aufgegeben.");
   }
 
   ngOnInit(): void {

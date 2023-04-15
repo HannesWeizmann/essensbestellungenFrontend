@@ -13,7 +13,10 @@ import { Gericht } from '../dataclass/gericht';
 })
 export class SpeiseplanErstellenComponent {
 
-  
+  async navigateBack(){
+    this.router.navigate(['/adminportal'])
+  }
+
   errorMessage: string = "";
 
 
