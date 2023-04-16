@@ -71,12 +71,13 @@ export class SpeiseplanErstellenComponent {
     }
   }
 
-  setTag(date: Date){
+  setTag(_id: String | undefined){
       this.days.forEach(element => {
-          if(element.date == date){
+          if(element._id == _id){
             this.tag = element;
           }
       });
+      this.bearbeitenVisible= true;
   }
 
   async delete(id: string|undefined){
