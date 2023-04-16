@@ -1,6 +1,7 @@
 <button  mat-raised-button class="btn-back" (click) = "navigateBack();" >Zurück</button>
 <br><br>
 <div class="listWrapper">
+    <button mat-raised-button class="add-btn">Tag hinzufügen </button>
     <mat-card *ngFor="let day of days ; let i = index"  class="date-card">
         <mat-card-content>
         <p>{{i +1 }} - {{day.date}}
@@ -12,7 +13,7 @@
 </div>
 
 
-<div class="bearbeiten-wrapper">
+<div class="bearbeiten-wrapper" *ngIf="bearbeitenVisible">
     <mat-card-header>
     <mat-card-title>Bearbeiten von Tag : {{tag.date}}</mat-card-title>
     </mat-card-header>
@@ -22,5 +23,44 @@
                 <input name="name" matInput placeholder="Name">
             </mat-form-field>
         </mat-card-content>
+    </form>
+</div>
+
+<div class="bearbeiten-wrapper">
+    <mat-card-header>
+        <mat-card-title>Speiseplan für neuen Tag erstellen</mat-card-title>
+    </mat-card-header>
+    <form>
+        <mat-card-content>
+                <mat-form-field >
+                    <mat-label>Datum</mat-label>
+                    <input [(ngModel)]="newDay.date" type="date" name="date" matInput >
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>Menu 1</mat-label>
+                    <mat-select [(ngModel)]="newDay.menu1" name="menu1" >
+                    <mat-option *ngFor="let menu of menus" [value]="menu"> {{menu.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>Menu 2</mat-label>
+                    <mat-select [(ngModel)]="newDay.menu2" name="menu2" >
+                    <mat-option *ngFor="let menu of menus" [value]="menu"> {{menu.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>Nachtisch</mat-label>
+                    <mat-select [(ngModel)]="newDay.nachtisch" name="nachtisch" >
+                    <mat-option *ngFor="let nachtisch of nachtische" [value]="nachtisch"> {{nachtisch.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field >
+                    <mat-label>Suppe</mat-label>
+                    <mat-select [(ngModel)]="newDay.suppe" name="suppe" >
+                    <mat-option *ngFor="let suppe of suppen" [value]="suppe"> {{suppe.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+        </mat-card-content>
+        <button  mat-raised-button class="add-btn" (click)="addDay()">Speichern</button>
     </form>
 </div>

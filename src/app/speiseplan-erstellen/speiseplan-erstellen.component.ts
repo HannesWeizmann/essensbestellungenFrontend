@@ -13,20 +13,18 @@ import { Gericht } from '../dataclass/gericht';
 })
 export class SpeiseplanErstellenComponent {
 
-  async navigateBack(){
-    this.router.navigate(['/adminportal'])
-  }
-
   errorMessage: string = "";
-
-
-  //public days1: Observable<Day[]> | undefined;
   public days!: Day[] ;
-
   defaultdate = new Date();
   defaultgericht = new Gericht("",0,0);
-  //public tag: Day = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht, this.defaultgericht);
   public tag!: Day;
+  public bearbeitenVisible: Boolean = false;
+  public hinzufügenVisible: Boolean = true;
+  newDay: Day  = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+  public gerichte: Gericht[] = [];
+  menus: Gericht[] = [];
+  suppen:  Gericht[] = [];
+  nachtische:  Gericht[]  = [];
 
   constructor(
     private readonly http: AppHttpClient,
@@ -35,23 +33,23 @@ export class SpeiseplanErstellenComponent {
 
   ngOnInit(): void {
     this.getDays();
+    this.getGerichte();
+  }
+
+
+  async navigateBack(){
+    this.router.navigate(['/adminportal'])
   }
 
   async addDay(){
     try{
-      //const result = await firstValueFrom(this.http.post<any>("localhost:3000/day", this.newDay, {withCredentials: true}))
-      //salert(result)
-      
-      
-    }catch(error)
-    {
-        alert((error as Error).message)
-    }
+      const result = await firstValueFrom(this.http.post<any>("/day", this.newDay, {withCredentials: true}))
+      alert("dobne")
+    }catch(error){alert((error as Error).message)}
   }
 
   async getDays(){
     try{
-      //this.days= this.http.get<Day[]>("day/",{ withCredentials: true}).pipe(map(data=> data));
       this.days = await firstValueFrom(this.http.get<Day[]>("/day/",{ withCredentials: true}));
       this.defaultdate= this.days[0].date;
       this.tag = new Day ( this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht, this.defaultgericht);
@@ -77,6 +75,24 @@ export class SpeiseplanErstellenComponent {
     }
   }
 
+  async getGerichte(){
+    try{
+      this.gerichte = await firstValueFrom(this.http.get<Gericht[]>('/gericht', { withCredentials: true}))
+      this.gerichte.forEach((element: any) => {
+        if(element.kategorie ==0){
+          this.menus.push(element);
+        }
+        else if (element.kategorie ==1){
+          this.nachtische.push(element);
+        }
+        else if(element.kategorie ==2){
+          this.suppen.push(element);
+        }
+
+      });
+    }catch(error){
+      this.errorMessage = (error as Error).message;    }
+  }
 
 }
 
