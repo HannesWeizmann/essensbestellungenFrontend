@@ -4,7 +4,8 @@
     <button mat-raised-button class="add-btn" (click)="makeAddVisible()">Tag hinzufügen </button>
     <mat-card *ngFor="let day of days ; let i = index"  class="date-card">
         <mat-card-content>
-        <p>{{i +1 }} - {{day.date}}
+        <p *ngIg="false">{{i +1 }}</p>
+        <p>{{day.date.getDate()}} / {{day.date.getMonth() +1 }} / {{day.date.getFullYear()}}
                 <button mat-raised-button class="bearbeiten-btn" (click)="setTag(day.date)">Bearbeiten</button>
                 <button mat-raised-button class="bearbeiten-btn" (click)="delete(day._id)">Löschen</button>
             </p>

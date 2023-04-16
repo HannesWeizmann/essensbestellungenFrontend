@@ -35,8 +35,6 @@ export class SpeiseplanErstellenComponent {
     this.getDays();
     this.getGerichte();
 
-    let test: Date = new Date("2019-01-16");
-    //alert(test.getTime())
   }
 
 
@@ -58,7 +56,16 @@ export class SpeiseplanErstellenComponent {
       this.days = await firstValueFrom(this.http.get<Day[]>("/day/",{ withCredentials: true}));
       this.defaultdate= this.days[0].date;
       this.tag = new Day ( this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht, this.defaultgericht);
-      this.days.sort((a,b)=> a.date.getTime() - b.date.getTime())
+      //
+      let transfer: Date | undefined;
+      this.days.forEach(element => {
+        transfer = new Date(element.date);
+        element.date = transfer;
+      });
+      //let test: Date = new Date(this.days[1].date)
+      //alert(test)
+      //
+      this.days.sort((a,b)=> a.date.getTime() - b.date.getTime());
     }catch(error){
       this.errorMessage = (error as Error).message;
     }
