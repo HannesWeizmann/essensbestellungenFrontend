@@ -113,5 +113,10 @@ export class SpeiseplanErstellenComponent {
     this.addVisible = true;
   }
 
+  addAbrechen(){
+    this.newDay = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+    this.addVisible = false;
+  }
+
 }
 
