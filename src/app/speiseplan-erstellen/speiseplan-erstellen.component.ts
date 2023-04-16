@@ -19,7 +19,7 @@ export class SpeiseplanErstellenComponent {
   defaultgericht = new Gericht("",0,0);
   public tag!: Day;
   public bearbeitenVisible: Boolean = false;
-  public hinzufügenVisible: Boolean = true;
+  public addVisible: Boolean = false;
   newDay: Day  = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
   public gerichte: Gericht[] = [];
   menus: Gericht[] = [];
@@ -34,6 +34,9 @@ export class SpeiseplanErstellenComponent {
   ngOnInit(): void {
     this.getDays();
     this.getGerichte();
+
+    let test: Date = new Date("2019-01-16");
+    //alert(test.getTime())
   }
 
 
@@ -43,8 +46,10 @@ export class SpeiseplanErstellenComponent {
 
   async addDay(){
     try{
-      const result = await firstValueFrom(this.http.post<any>("/day", this.newDay, {withCredentials: true}))
-      alert("dobne")
+      const result = await firstValueFrom(this.http.post<any>("/day", this.newDay, {withCredentials: true}));
+      this.getDays();
+      this.newDay = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+      this.addVisible = false;
     }catch(error){alert((error as Error).message)}
   }
 
@@ -53,6 +58,7 @@ export class SpeiseplanErstellenComponent {
       this.days = await firstValueFrom(this.http.get<Day[]>("/day/",{ withCredentials: true}));
       this.defaultdate= this.days[0].date;
       this.tag = new Day ( this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht, this.defaultgericht);
+      this.days.sort((a,b)=> a.date.getTime() - b.date.getTime())
     }catch(error){
       this.errorMessage = (error as Error).message;
     }
@@ -92,6 +98,11 @@ export class SpeiseplanErstellenComponent {
       });
     }catch(error){
       this.errorMessage = (error as Error).message;    }
+  }
+
+  makeAddVisible(){
+    this.bearbeitenVisible = false;
+    this.addVisible = true;
   }
 
 }

@@ -1,7 +1,7 @@
 <button  mat-raised-button class="btn-back" (click) = "navigateBack();" >Zurück</button>
 <br><br>
 <div class="listWrapper">
-    <button mat-raised-button class="add-btn">Tag hinzufügen </button>
+    <button mat-raised-button class="add-btn" (click)="makeAddVisible()">Tag hinzufügen </button>
     <mat-card *ngFor="let day of days ; let i = index"  class="date-card">
         <mat-card-content>
         <p>{{i +1 }} - {{day.date}}
@@ -26,7 +26,7 @@
     </form>
 </div>
 
-<div class="bearbeiten-wrapper">
+<div class="bearbeiten-wrapper" *ngIf="addVisible">
     <mat-card-header>
         <mat-card-title>Speiseplan für neuen Tag erstellen</mat-card-title>
     </mat-card-header>
