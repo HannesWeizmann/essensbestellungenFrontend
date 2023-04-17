@@ -10,6 +10,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import { AdminGuard } from './guards/adminGuard';
 import { UserGuard } from './guards/userGuard';
 import {SpeiseplanErstellenComponent} from './speiseplan-erstellen/speiseplan-erstellen.component';
+import { MeineBestellungenComponent } from './meine-bestellungen/meine-bestellungen.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "speiseplan", component: SpeiseplanComponent, canActivate:[UserGuard]},
   { path: "speiseplanErstellen", component: SpeiseplanErstellenComponent, canActivate:[AdminGuard]},
+  { path: "meine-bestellungen", component: MeineBestellungenComponent, canActivate:[UserGuard]},
   { path: "sign-up", component: SignUpComponent}
   
 ];
