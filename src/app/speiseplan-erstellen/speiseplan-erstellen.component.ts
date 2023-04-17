@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppHttpClient } from '../shared/http-client.service';
 import {Day} from 'src/app/dataclass/day';
 import { firstValueFrom, Observable , map} from 'rxjs';
 import { Gericht } from '../dataclass/gericht';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class SpeiseplanErstellenComponent {
   constructor(
     private readonly http: AppHttpClient,
     private readonly router: Router,
+    @Inject(DOCUMENT) document: Document,
   ) {}
 
   ngOnInit(): void {
@@ -62,9 +64,6 @@ export class SpeiseplanErstellenComponent {
         transfer = new Date(element.date);
         element.date = transfer;
       });
-      //let test: Date = new Date(this.days[1].date)
-      //alert(test)
-      //
       this.days.sort((a,b)=> a.date.getTime() - b.date.getTime());
     }catch(error){
       this.errorMessage = (error as Error).message;
@@ -77,7 +76,10 @@ export class SpeiseplanErstellenComponent {
             this.tag = element;
           }
       });
-      this.bearbeitenVisible= true;
+      //this.bearbeitenVisible= true;
+      //let stringg = this.tag.date.getDate().toString() + this.tag.date.getMonth().toString();
+      //alert(stringg);
+      //(<HTMLInputElement>document.getElementById('date-b')!).value = "23032005";
   }
 
   async delete(id: string|undefined){

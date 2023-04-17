@@ -7,19 +7,19 @@
     <mat-card-header>
       <mat-card-title>Speiseplan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{datum}}</mat-card-title>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{montag.toLocaleDateString()}} - {{sonntag.toLocaleDateString()}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <table>
         <thead>
           <tr class="header-row">
             <th></th>
-            <th>Montag</th>
-            <th>Dienstag</th>
-            <th>Mittwoch</th>
-            <th>Donnerstag</th>
-            <th>Freitag</th>
-            <th>Samstag</th>
+          <th>Montag - {{montag.getDate()}}.{{montag.getMonth() + 1}}</th>
+            <th>Dienstag - {{dienstag.getDate()}}.{{dienstag.getMonth() + 1}}</th>
+            <th>Mittwoch - {{mittwoch.getDate()}}.{{mittwoch.getMonth() + 1}}</th>
+            <th>Donnerstag - {{donnerstag.getDate()}}.{{donnerstag.getMonth() + 1}}</th>
+            <th>Freitag - {{freitag.getDate()}}.{{freitag.getMonth() + 1}}</th>
+            <th>Samstag - {{samstag.getDate()}}.{{samstag.getMonth() + 1}}</th>
           </tr>
         </thead>
         <tbody>

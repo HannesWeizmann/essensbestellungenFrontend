@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Auth} from 'src/app/guards/auth';
+import { AppHttpClient } from '../shared/http-client.service';
+import { Day } from '../dataclass/day';
+import { firstValueFrom, Observable , map} from 'rxjs';
+import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
+
 
 @Component({
   selector: 'app-speiseplan',
@@ -7,6 +12,19 @@ import {Auth} from 'src/app/guards/auth';
   styleUrls: ['./speiseplan.component.scss']
 })
 export class SpeiseplanComponent implements OnInit {
+
+  constructor(private readonly http: AppHttpClient){}
+
+  public days!: Day[];
+  today: Date = new Date();
+  montag: Date = new Date();
+  dienstag: Date = new Date();
+  mittwoch: Date = new Date();
+  donnerstag: Date = new Date();
+  freitag: Date = new Date();
+  samstag: Date = new Date();
+  sonntag = new Date();
+
   private auth: Auth = new Auth();
   public username = "";
   tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
@@ -49,12 +67,23 @@ export class SpeiseplanComponent implements OnInit {
   public nachtisch_samstag = "";
 
   async naechsteWoche(){
-    //speiseplan der nächsten woche soll angezeigt werden
+    this.montag.setDate(this.montag.getDate()+ 7);
+    this.dienstag.setDate(this.dienstag.getDate()+ 7);
+    this.mittwoch.setDate(this.mittwoch.getDate()+ 7);
+    this.donnerstag.setDate(this.donnerstag.getDate()+ 7);
+    this.freitag.setDate(this.freitag.getDate()+ 7);
+    this.samstag.setDate(this.samstag.getDate()+ 7);
+    this.sonntag.setDate(this.sonntag.getDate()+ 7);
   }
 
   async vorherigeWoche(){
-    //nachdem man auf nachste woche gedrückt hat, soll man mit diesem knopf wieder
-    //zurück navigieren können
+    this.montag.setDate(this.montag.getDate()- 7);
+    this.dienstag.setDate(this.dienstag.getDate()- 7);
+    this.mittwoch.setDate(this.mittwoch.getDate()- 7);
+    this.donnerstag.setDate(this.donnerstag.getDate()- 7);
+    this.freitag.setDate(this.freitag.getDate()- 7);
+    this.samstag.setDate(this.samstag.getDate()- 7);
+    this.sonntag.setDate(this.sonntag.getDate()- 7);
   }
   
   submitBestellung() {
@@ -97,9 +126,31 @@ export class SpeiseplanComponent implements OnInit {
   ngOnInit(): void {
 
     this.username = this.auth.getUsername();
+    this.getDays();
+    this.getMonday();
 
     //this.menu1_montag = this.getGericht('Spaghetti Carbonara');
 
+  }
+
+  async getDays(){
+    try {
+      this.days = await firstValueFrom(this.http.get<Day[]>("/day/",{ withCredentials: true}));
+    } catch (error) {
+      alert((error as Error).message)
+    }
+  }
+
+  getMonday(){
+    var day = this.today.getDay();
+    var diff = this.today.getDate() - day + (day == 0 ? -6:1);
+    this.montag.setDate(diff);
+    this.dienstag.setDate(this.montag.getDate()+ 1);
+    this.mittwoch.setDate(this.montag.getDate()+ 2);
+    this.donnerstag.setDate(this.montag.getDate()+ 3);
+    this.freitag.setDate(this.montag.getDate()+ 4);
+    this.samstag.setDate(this.montag.getDate()+ 5);
+    this.sonntag.setDate(this.montag.getDate()+ 6);
   }
 
 }
