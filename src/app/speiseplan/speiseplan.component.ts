@@ -5,6 +5,7 @@ import { Day } from '../dataclass/day';
 import { firstValueFrom, Observable , map} from 'rxjs';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
 import { Gericht } from '../dataclass/gericht';
+import {Bestellung} from 'src/app/dataclass/bestellung';
 
 
 @Component({
@@ -36,8 +37,19 @@ export class SpeiseplanComponent implements OnInit {
   samstag: Date = new Date();
   sonntag = new Date();
 
+  defaultBestellung: Bestellung = new Bestellung(this.defaultdate, "", false, 0);
+  newBestellung: Bestellung = this.defaultBestellung;
+
   private auth: Auth = new Auth();
   public username = "";
+
+  tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  selectedTag: string = '';
+  selectedMenu: string = '';
+  hasNachtisch = false;
+  hasSuppe = false;
+  isVegetarisch = false;
+  kosten  = 0;
 
   async naechsteWoche(){
     this.montag.setDate(this.montag.getDate()+ 7);
@@ -113,36 +125,21 @@ export class SpeiseplanComponent implements OnInit {
   }
 
 
-  tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
-  selectedTag: string = '';
-  selectedMenu: string = '';
-  hasNachtisch = false;
-  hasSuppe = false;
-  isVegetarisch = false;
+
+
   submitBestellung() {
+    
+
     if (!this.selectedTag) {
       alert("Bitte wählen Sie einen Tag aus.");
       return;
     }
-    
-  // automatisch Menü 2 auswählen und Suppe deaktivieren, wenn Samstag ausgewählt wurde
-  if (this.selectedTag === 'Samstag') {
-    this.selectedMenu = 'Menü 2';
-    this.hasSuppe = false;
-  } else if (!this.selectedMenu) {
-    alert("Bitte wählen Sie ein Menü aus.");
-    return;
-  }
-    
-    // Erstellen eines Bestellungs-Objekts
-    const bestellung = {
-      tag: this.selectedTag,
-      menu: this.selectedMenu || null,
-      nachtisch: this.hasNachtisch,
-      suppe: this.hasSuppe,
-      vegetarisch: this.isVegetarisch
-    };
-    
+    if (!this.selectedMenu) {
+      alert("Bitte wählen Sie ein Menü aus.");
+      return;
+    }
+    this.kostenBerechnen();
+    this.newBestellung.kosten = this.kosten;
     //Code, der die Bestellung an den Server sendet oder lokal speichert
     // ...
   
@@ -154,6 +151,114 @@ export class SpeiseplanComponent implements OnInit {
     this.isVegetarisch = false;
   
     alert("Ihre Bestellung wurde erfolgreich aufgegeben.");
+  }
+
+  createBestellung(){
+    this.newBestellung.username = this.username;
+    if(!this.selectedTag){}
+    else if(this.selectedTag =='Montag'){
+      this.newBestellung.date = this.monday.date;
+      if(this.selectedMenu=='Menü 1'){
+        this.newBestellung.menu1 = this.monday.menu1;
+      }
+      else{
+        this.newBestellung.menu2 = this.monday.menu2;
+      }
+      if(this.hasNachtisch== true){
+        this.newBestellung.nachtisch= this.monday.nachtisch;
+      }
+      if(this.hasSuppe==true){
+        this.newBestellung.suppe = this.monday.suppe;
+      }
+    }
+    else if(this.selectedTag =='Dienstag'){
+      this.newBestellung.date = this.tuesday.date;
+      if(this.selectedMenu=='Menü 1'){
+        this.newBestellung.menu1 = this.tuesday.menu1;
+      }
+      else{
+        this.newBestellung.menu2 = this.tuesday.menu2;
+      }
+      if(this.hasNachtisch== true){
+        this.newBestellung.nachtisch= this.tuesday.nachtisch;
+      }
+      if(this.hasSuppe==true){
+        this.newBestellung.suppe = this.tuesday.suppe;
+      }
+    }
+    else if(this.selectedTag =='Mittwoch'){
+      this.newBestellung.date = this.wendsday.date;
+      if(this.selectedMenu=='Menü 1'){
+        this.newBestellung.menu1 = this.wendsday.menu1;
+      }
+      else{
+        this.newBestellung.menu2 = this.wendsday.menu2;
+      }
+      if(this.hasNachtisch== true){
+        this.newBestellung.nachtisch= this.wendsday.nachtisch;
+      }
+      if(this.hasSuppe==true){
+        this.newBestellung.suppe = this.wendsday.suppe;
+      }
+    }
+    else if(this.selectedTag =='Donnerstag'){
+      this.newBestellung.date = this.thursday.date;
+      if(this.selectedMenu=='Menü 1'){
+        this.newBestellung.menu1 = this.thursday.menu1;
+      }
+      else{
+        this.newBestellung.menu2 = this.thursday.menu2;
+      }
+      if(this.hasNachtisch== true){
+        this.newBestellung.nachtisch= this.thursday.nachtisch;
+      }
+      if(this.hasSuppe==true){
+        this.newBestellung.suppe = this.thursday.suppe;
+      }
+    }
+    else if(this.selectedTag =='Freitag'){
+      this.newBestellung.date = this.friday.date;
+      if(this.selectedMenu=='Menü 1'){
+        this.newBestellung.menu1 = this.friday.menu1;
+      }
+      else{
+        this.newBestellung.menu2 = this.friday.menu2;
+      }
+      if(this.hasNachtisch== true){
+        this.newBestellung.nachtisch= this.friday.nachtisch;
+      }
+      if(this.hasSuppe==true){
+        this.newBestellung.suppe = this.friday.suppe;
+      }
+    }
+    else if (this.selectedTag == 'Samstag') {
+      this.newBestellung.date = this.saturday.date;
+      this.selectedMenu = 'Menü 2';
+      this.newBestellung.menu2 = this.saturday.menu2;
+      this.hasSuppe = false;
+      if(this.hasNachtisch== true){
+        this.newBestellung.nachtisch= this.saturday.nachtisch;
+      }
+    }
+    if(this.selectedMenu =="Menü 2" && this.isVegetarisch == true){
+      this.newBestellung.vegetarisch = true;
+    }
+  }
+
+  kostenBerechnen(){
+    this.createBestellung()
+    if(!this.newBestellung.menu1 ==false){
+      this.kosten += this.newBestellung.menu1!.preis;
+    }else if(!this.newBestellung.menu2 ==false){
+      this.kosten += this.newBestellung.menu2!.preis;
+    }
+    if(!this.newBestellung.nachtisch ==false){
+      alert(this.newBestellung.nachtisch!.preis +this.kosten);
+      this.kosten += this.newBestellung.nachtisch!.preis;
+    }
+    if(!this.newBestellung.suppe ==false){
+      this.kosten += this.newBestellung.suppe!.preis;
+    }
   }
 
 }

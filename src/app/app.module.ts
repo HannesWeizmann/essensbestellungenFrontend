@@ -14,7 +14,6 @@ import { AuthService } from './shared/auth.service';
 import { UserService } from './shared/user.service';
 import { AdminportalComponent } from './adminportal/adminportal.component';
 import { AddGerichtComponent } from './add-gericht/add-gericht.component';
-import { AddDayComponent } from './add-day/add-day.component';
 import { GerichtVerwaltungComponent } from './gericht-verwaltung/gericht-verwaltung.component';
 import { ShowGerichtComponent } from './show-gericht/show-gericht.component';
 import { SpeiseplanComponent} from './speiseplan/speiseplan.component'
@@ -31,7 +30,6 @@ import { MeineBestellungenComponent } from './meine-bestellungen/meine-bestellun
     HeaderComponent,
     AdminportalComponent,
     AddGerichtComponent,
-    AddDayComponent,
     GerichtVerwaltungComponent,
     ShowGerichtComponent,
     SpeiseplanComponent,

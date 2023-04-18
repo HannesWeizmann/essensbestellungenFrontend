@@ -86,25 +86,25 @@
     <mat-card-content>
       <mat-form-field>
         <mat-label>Tag auswählen</mat-label>
-        <mat-select [(ngModel)]="selectedTag">
+        <mat-select [(ngModel)]="selectedTag" (change)="kostenBerechnen()">
           <mat-option *ngFor="let tag of tage" [value]="tag">{{tag}}</mat-option>
         </mat-select>
       </mat-form-field>
       &nbsp;
       <mat-form-field *ngIf="selectedTag !== 'Samstag'">
         <mat-label>Menü 1 oder Menü 2?</mat-label>
-        <mat-select [(ngModel)]="selectedMenu">
+        <mat-select [(ngModel)]="selectedMenu" (change)="kostenBerechnen()">
           <mat-option value="Menü 1">Menü 1</mat-option>
           <mat-option value="Menü 2">Menü 2</mat-option>
         </mat-select>
       </mat-form-field>
       &nbsp;
-      <mat-checkbox *ngIf="selectedMenu === 'Menü 2' || selectedTag === 'Samstag'" [(ngModel)]="isVegetarisch">Vegetarisch&nbsp;&nbsp;</mat-checkbox>
+      <mat-checkbox *ngIf="selectedMenu === 'Menü 2' || selectedTag === 'Samstag'" [(ngModel)]="isVegetarisch" (change)="kostenBerechnen()">Vegetarisch&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
-      <mat-checkbox [(ngModel)]="hasNachtisch">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
+      <mat-checkbox [(ngModel)]="hasNachtisch" (change)="kostenBerechnen()">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
-      <mat-checkbox *ngIf="selectedTag !== 'Samstag'"[(ngModel)]="hasSuppe">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
-      <mat-card-title> Kosten: </mat-card-title>
+      <mat-checkbox *ngIf="selectedTag !== 'Samstag'"[(ngModel)]="hasSuppe" (change)="kostenBerechnen()">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
+      <mat-card-title> Kosten: {{kosten}} € </mat-card-title>
       <mat-card-actions>
         <button mat-raised-button class="btn-back" (click)="submitBestellung()">Bestellung aufgeben</button>
       </mat-card-actions>
