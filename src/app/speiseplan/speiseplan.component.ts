@@ -4,6 +4,7 @@ import { AppHttpClient } from '../shared/http-client.service';
 import { Day } from '../dataclass/day';
 import { firstValueFrom, Observable , map} from 'rxjs';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
+import { Gericht } from '../dataclass/gericht';
 
 
 @Component({
@@ -16,6 +17,16 @@ export class SpeiseplanComponent implements OnInit {
   constructor(private readonly http: AppHttpClient){}
 
   public days!: Day[];
+  defaultdate = new Date();
+  defaultgericht = new Gericht("",0,0);
+  defaultday: Day = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+  monday: Day= this.defaultday;
+  tuesday: Day= this.defaultday;
+  wendsday: Day= this.defaultday;
+  thursday: Day= this.defaultday;
+  friday: Day= this.defaultday;
+  saturday: Day= this.defaultday;
+
   today: Date = new Date();
   montag: Date = new Date();
   dienstag: Date = new Date();
@@ -74,6 +85,7 @@ export class SpeiseplanComponent implements OnInit {
     this.freitag.setDate(this.freitag.getDate()+ 7);
     this.samstag.setDate(this.samstag.getDate()+ 7);
     this.sonntag.setDate(this.sonntag.getDate()+ 7);
+    this.matchDays();
   }
 
   async vorherigeWoche(){
@@ -84,6 +96,7 @@ export class SpeiseplanComponent implements OnInit {
     this.freitag.setDate(this.freitag.getDate()- 7);
     this.samstag.setDate(this.samstag.getDate()- 7);
     this.sonntag.setDate(this.sonntag.getDate()- 7);
+    this.matchDays();
   }
   
   submitBestellung() {
@@ -126,8 +139,8 @@ export class SpeiseplanComponent implements OnInit {
   ngOnInit(): void {
 
     this.username = this.auth.getUsername();
-    this.getDays();
     this.getMonday();
+    this.getDays();
 
     //this.menu1_montag = this.getGericht('Spaghetti Carbonara');
 
@@ -136,9 +149,30 @@ export class SpeiseplanComponent implements OnInit {
   async getDays(){
     try {
       this.days = await firstValueFrom(this.http.get<Day[]>("/day/",{ withCredentials: true}));
+      //alert(this.days[0].menu1.name);
+      this.matchDays();
     } catch (error) {
       alert((error as Error).message)
     }
+  }
+
+  matchDays(){
+    this.monday = this.defaultday;
+    this.tuesday = this.defaultday;
+    this.wendsday = this.defaultday;
+    this.thursday = this.defaultday;
+    this.friday = this.defaultday;
+    this.saturday = this.defaultday;
+    var date: Date;
+    this.days.forEach(element => {
+      date = new Date(element.date)
+      if(date.toLocaleDateString() == this.montag.toLocaleDateString()){this.monday = element;}
+      else if(date.toLocaleDateString() == this.dienstag.toLocaleDateString()){this.tuesday = element;}
+      else if(date.toLocaleDateString() == this.mittwoch.toLocaleDateString()){this.wendsday = element;}
+      else if(date.toLocaleDateString() == this.donnerstag.toLocaleDateString()){this.thursday = element;}
+      else if(date.toLocaleDateString() == this.freitag.toLocaleDateString()){this.friday = element;}
+      else if(date.toLocaleDateString() == this.samstag.toLocaleDateString()){this.saturday = element;}
+    });
   }
 
   getMonday(){
