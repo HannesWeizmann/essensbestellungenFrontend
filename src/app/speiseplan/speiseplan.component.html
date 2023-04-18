@@ -25,38 +25,38 @@
         <tbody>
           <tr class="menu1-row">
             <th>Menü 1</th>
-            <td>{{monday.menu1.name}}</td>
-            <td>{{tuesday.menu1.name}}</td>
-            <td>{{wendsday.menu1.name}}</td>
-            <td>{{thursday.menu1.name}}</td>
-            <td>{{friday.menu1.name}}</td>
+            <td>{{monday.menu1.name}} ({{monday.menu1.preis}}€)</td>
+            <td>{{tuesday.menu1.name}} ({{tuesday.menu1.preis}}€)</td>
+            <td>{{wendsday.menu1.name}} ({{wendsday.menu1.preis}}€)</td>
+            <td>{{thursday.menu1.name}} ({{thursday.menu1.preis}}€)</td>
+            <td>{{friday.menu1.name}} ({{friday.menu1.preis}}€)</td>
             <td>{{saturday.menu1.name}}</td>
           </tr>
           <tr class="menu2-row">
             <th>Menü 2</th>
-            <td>{{monday.menu2.name}}</td>
-            <td>{{tuesday.menu2.name}}</td>
-            <td>{{wendsday.menu2.name}}</td>
-            <td>{{thursday.menu2.name}}</td>
-            <td>{{friday.menu2.name}}</td>
-            <td>{{saturday.menu2.name}}</td>
+            <td>{{monday.menu2.name}} ({{monday.menu1.preis}}€)</td>
+            <td>{{tuesday.menu2.name}} ({{tuesday.menu2.preis}}€)</td>
+            <td>{{wendsday.menu2.name}} ({{wendsday.menu2.preis}}€)</td>
+            <td>{{thursday.menu2.name}} ({{thursday.menu2.preis}}€)</td>
+            <td>{{friday.menu2.name}} ({{friday.menu2.preis}}€)</td>
+            <td>{{saturday.menu2.name}} ({{saturday.menu2.preis}}€)</td>
           </tr>
           <tr class="nachtisch-row">
             <th>Nachtisch</th>
-            <td>{{monday.nachtisch.name}}</td>
-            <td>{{tuesday.nachtisch.name}}</td>
-            <td>{{wendsday.nachtisch.name}}</td>
-            <td>{{thursday.nachtisch.name}}</td>
-            <td>{{friday.nachtisch.name}}</td>
-            <td>{{saturday.nachtisch.name}}</td>
+            <td>{{monday.nachtisch.name}} ({{monday.nachtisch.preis}}€)</td>
+            <td>{{tuesday.nachtisch.name}} ({{tuesday.nachtisch.preis}}€)</td>
+            <td>{{wendsday.nachtisch.name}} ({{wendsday.nachtisch.preis}}€)</td>
+            <td>{{thursday.nachtisch.name}} ({{thursday.nachtisch.preis}}€)</td>
+            <td>{{friday.nachtisch.name}} ({{friday.nachtisch.preis}}€)</td>
+            <td>{{saturday.nachtisch.name}} ({{saturday.nachtisch.preis}}€)</td>
           </tr>
           <tr class="suppe-row">
             <th>Suppe</th>
-            <td>{{monday.suppe.name}}</td>
-            <td>{{tuesday.suppe.name}}</td>
-            <td>{{wendsday.suppe.name}}</td>
-            <td>{{thursday.suppe.name}}</td>
-            <td>{{friday.suppe.name}}</td>
+            <td>{{monday.suppe.name}} ({{monday.suppe.preis}}€)</td>
+            <td>{{tuesday.suppe.name}} ({{tuesday.suppe.preis}}€)</td>
+            <td>{{wendsday.suppe.name}} ({{wendsday.suppe.preis}}€)</td>
+            <td>{{thursday.suppe.name}} ({{thursday.suppe.preis}}€)</td>
+            <td>{{friday.suppe.name}} ({{friday.suppe.preis}}€)</td>
             <td>{{saturday.suppe.name}}</td>
           </tr>
         </tbody>
@@ -104,7 +104,7 @@
       <mat-checkbox [(ngModel)]="hasNachtisch">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
       <mat-checkbox *ngIf="selectedTag !== 'Samstag'"[(ngModel)]="hasSuppe">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
-
+      <mat-card-title> Kosten: </mat-card-title>
       <mat-card-actions>
         <button mat-raised-button class="btn-back" (click)="submitBestellung()">Bestellung aufgeben</button>
       </mat-card-actions>
