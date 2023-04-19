@@ -127,7 +127,7 @@ export class SpeiseplanComponent implements OnInit {
 
 
 
-  submitBestellung() {
+  async submitBestellung() {
     
 
     if (!this.selectedTag) {
@@ -142,6 +142,11 @@ export class SpeiseplanComponent implements OnInit {
     this.newBestellung.kosten = this.kosten;
     //Code, der die Bestellung an den Server sendet oder lokal speichert
     // ...
+    try {
+      const result = await firstValueFrom(this.http.post<any>("/bestellung", this.newBestellung,{withCredentials:true}));
+    } catch (error) {
+      alert((error as Error).message)
+    }
   
     // Rücksetzen des Formulars
     this.selectedTag = '';
