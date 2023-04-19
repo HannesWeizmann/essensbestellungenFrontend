@@ -34,7 +34,7 @@
           </tr>
           <tr class="menu2-row">
             <th>Menü 2</th>
-            <td>{{monday.menu2.name}} ({{monday.menu1.preis}}€)</td>
+            <td>{{monday.menu2.name}} ({{monday.menu2.preis}}€)</td>
             <td>{{tuesday.menu2.name}} ({{tuesday.menu2.preis}}€)</td>
             <td>{{wendsday.menu2.name}} ({{wendsday.menu2.preis}}€)</td>
             <td>{{thursday.menu2.name}} ({{thursday.menu2.preis}}€)</td>
@@ -93,13 +93,13 @@
       &nbsp;
       <mat-form-field *ngIf="selectedTag !== 'Samstag'">
         <mat-label>Menü 1 oder Menü 2?</mat-label>
-        <mat-select [(ngModel)]="selectedMenu" (change)="kostenBerechnen()">
-          <mat-option value="Menü 1">Menü 1</mat-option>
-          <mat-option value="Menü 2">Menü 2</mat-option>
+        <mat-select [(ngModel)]="selectedMenu" (ngModelChange)="kostenBerechnen()">
+          <mat-option value="Menü 1" >Menü 1</mat-option>
+          <mat-option value="Menü 2" >Menü 2</mat-option>
         </mat-select>
       </mat-form-field>
       &nbsp;
-      <mat-checkbox *ngIf="selectedMenu === 'Menü 2' || selectedTag === 'Samstag'" [(ngModel)]="isVegetarisch" (change)="kostenBerechnen()">Vegetarisch&nbsp;&nbsp;</mat-checkbox>
+      <mat-checkbox *ngIf="selectedMenu === 'Menü 2' || selectedTag === 'Samstag'" [(ngModel)]="isVegetarisch" >Vegetarisch&nbsp;&nbsp;</mat-checkbox>
       &nbsp;
       <mat-checkbox [(ngModel)]="hasNachtisch" (change)="kostenBerechnen()">Nachtisch bestellen&nbsp;&nbsp;</mat-checkbox>
       &nbsp;

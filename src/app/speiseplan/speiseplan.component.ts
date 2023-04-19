@@ -246,19 +246,28 @@ export class SpeiseplanComponent implements OnInit {
   }
 
   kostenBerechnen(){
-    this.createBestellung()
+    this.newBestellung =new Bestellung(this.defaultdate, "", false, 0);
+    this.createBestellung();
+    var summe = 0;
     if(!this.newBestellung.menu1 ==false){
-      this.kosten += this.newBestellung.menu1!.preis;
+      var result = summe + this.newBestellung.menu1!.preis;
+      var rounded = result.toFixed(2);
+      summe = Number(rounded);
     }else if(!this.newBestellung.menu2 ==false){
-      this.kosten += this.newBestellung.menu2!.preis;
+      var result = summe + this.newBestellung.menu2!.preis;
+      var rounded = result.toFixed(2);
+      summe = Number(rounded);
     }
     if(!this.newBestellung.nachtisch ==false){
-      alert(this.newBestellung.nachtisch!.preis +this.kosten);
-      this.kosten += this.newBestellung.nachtisch!.preis;
+      var result = summe + this.newBestellung.nachtisch!.preis;
+      var rounded = result.toFixed(2);
+      summe = Number(rounded);
     }
     if(!this.newBestellung.suppe ==false){
-      this.kosten += this.newBestellung.suppe!.preis;
+      var result = summe + this.newBestellung.suppe!.preis;
+      var rounded = result.toFixed(2);
+      summe = Number(rounded);
     }
+    this.kosten = summe;
   }
-
 }

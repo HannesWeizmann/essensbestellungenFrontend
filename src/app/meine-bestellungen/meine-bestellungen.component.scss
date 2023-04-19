@@ -2,3 +2,48 @@ button.btn-back {
     color: white;
     background-color: darkblue;
 }
+
+.listWrapper{
+    background-color: grey;
+    position: relative;
+    top:0;
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 40%;
+    border-radius: 10px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    z-index: 5;
+}
+
+.detail-wrapper{
+    background-color: grey;
+    position: relative;
+    top:0;
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 40%;
+    border-radius: 10px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    z-index: 5;
+}
+
+.date-card{
+    margin: 10px;
+    color: white;
+}
+
+.btn-show{
+    float: right;
+    color: white;
+    background-color: darkblue;
+}
