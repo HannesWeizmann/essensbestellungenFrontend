@@ -27,6 +27,6 @@
         <h4>Suppe</h4>
         <p *ngIf="hasSuppe">{{bestellung.suppe!.name}} - {{bestellung.suppe!.preis}} €</p>
     <h3>Gesamt Preis: {{bestellung.kosten}} €</h3>
-    <button mat-raised-button (click)="deleteBestellung(bestellung._id)">Löschen</button>
+    <button mat-raised-button class="btn-delete" (click)="deleteBestellung(bestellung._id)">Löschen</button>
     </mat-card-content>
 </div>
