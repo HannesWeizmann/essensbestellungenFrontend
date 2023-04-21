@@ -6,8 +6,8 @@
         <mat-card-content>
         <p *ngIg="false">{{i +1 }}</p>
         <p>{{day.date.toDateString()}}
-                <button mat-raised-button class="bearbeiten-btn" (click)="setTag(day._id)">Bearbeiten</button>
-                <button mat-raised-button class="bearbeiten-btn" (click)="delete(day._id)">Löschen</button>
+                <button mat-raised-button class="bearbeiten-btn" (click)="setTag(day._id)"  *ngIf="day._id !== tag._id">Anzeigen</button>
+                <button mat-raised-button class="selected-btn" *ngIf="day._id == tag._id" >Anzeigen</button>
         </p>
         </mat-card-content>
     </mat-card>
@@ -16,41 +16,21 @@
 
 <div class="bearbeiten-wrapper" *ngIf="bearbeitenVisible">
     <mat-card-header>
-    <mat-card-title>Bearbeiten von Tag : {{tag.date.toDateString()}}</mat-card-title>
+    <mat-card-title>Speiseplan : {{tag.date.toDateString()}}</mat-card-title>
+    <br><br>
     </mat-card-header>
-    <form>
         <mat-card-content>
-                <mat-form-field >
-                    <mat-label>Datum</mat-label>
-                    <input [(ngModel)]="tag.date" type="date"  name="date" id="date-b"  matInput >
-                </mat-form-field>
-                <mat-form-field >
-                    <mat-label>Menu 1</mat-label>
-                    <mat-select [(ngModel)]="tag.menu1" name="menu1" >
-                    <mat-option *ngFor="let menu of menus" [value]="menu"> {{menu.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <mat-form-field >
-                    <mat-label>Menu 2</mat-label>
-                    <mat-select [(ngModel)]="tag.menu2" name="menu2" >
-                    <mat-option *ngFor="let menu of menus" [value]="menu"> {{menu.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <mat-form-field >
-                    <mat-label>Nachtisch</mat-label>
-                    <mat-select [(ngModel)]="tag.nachtisch" name="nachtisch" >
-                    <mat-option *ngFor="let nachtisch of nachtische" [value]="nachtisch"> {{nachtisch.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <mat-form-field >
-                    <mat-label>Suppe</mat-label>
-                    <mat-select [(ngModel)]="tag.suppe" name="suppe" >
-                    <mat-option *ngFor="let suppe of suppen" [value]="suppe"> {{suppe.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
+            <h2>Menü 1</h2>
+            <p>{{tag.menu1.name}} ({{tag.menu1.preis}}€)</p>
+            <h2>Menü 2</h2>
+            <p>{{tag.menu2.name}} ({{tag.menu2.preis}}€)</p>
+            <h2>Nachtisch</h2>
+            <p>{{tag.nachtisch.name}} ({{tag.nachtisch.preis}}€)</p>
+            <h2>Suppe</h2>
+            <p>{{tag.suppe.name}} ({{tag.suppe.preis}}€)</p>
+            <button mat-raised-button class="bearbeiten-btn" (click)="delete(tag._id)">Löschen</button>
         </mat-card-content>
-        <button  mat-raised-button class="add-btn" (click)="addDay()">Speichern</button>
-    </form>
+
 </div>
 
 <div class="bearbeiten-wrapper" *ngIf="addVisible">

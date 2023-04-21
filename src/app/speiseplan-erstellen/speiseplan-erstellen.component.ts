@@ -76,16 +76,15 @@ export class SpeiseplanErstellenComponent {
             this.tag = element;
           }
       });
-      //this.bearbeitenVisible= true;
-      //let stringg = this.tag.date.getDate().toString() + this.tag.date.getMonth().toString();
-      //alert(stringg);
-      //(<HTMLInputElement>document.getElementById('date-b')!).value = "23032005";
+      this.bearbeitenVisible= true;
+      this.addVisible=false;
   }
 
   async delete(id: string|undefined){
     try {
       const result = await firstValueFrom(this.http.delete('/day/' + id, { withCredentials: true}))
       this.getDays()
+      this.bearbeitenVisible=false;
     } catch (error) {
       alert((error as Error).message)
     }
@@ -113,6 +112,7 @@ export class SpeiseplanErstellenComponent {
   makeAddVisible(){
     this.bearbeitenVisible = false;
     this.addVisible = true;
+    this.tag = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
   }
 
   addAbrechen(){
