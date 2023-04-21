@@ -1,10 +1,11 @@
 <button  mat-raised-button class="btn-back" (click) = "navigateBack();" >Zurück</button>
 <br><br>
 <div class="listWrapper">
-    <mat-card *ngFor="let bestellung of myBestellungen"  class="date-card">
+    <mat-card *ngFor="let element of myBestellungen"  class="date-card">
         <mat-card-content>
-        <p>{{bestellung.date.toDateString()}}
-            <button mat-raised-button class="btn-show" (click)="showDetails(bestellung._id)">Anzeigen</button>
+        <p>{{element.date.toDateString()}}
+            <button mat-raised-button class="btn-show" (click)="showDetails(element._id)" *ngIf="element._id != bestellung._id">Anzeigen</button>
+            <button mat-raised-button class="btn-selected" *ngIf="element._id == bestellung._id">Anzeigen</button>
         </p>
         </mat-card-content>
     </mat-card>
@@ -16,17 +17,17 @@
     </mat-card-header>
     <br>
     <mat-card-content>
-        <h4 *ngIf="hasMenu1">Menü 1</h4>
+        <h2 *ngIf="hasMenu1">Menü 1</h2>
         <p *ngIf="hasMenu1">{{bestellung.menu1!.name}} - {{bestellung.menu1!.preis}} €</p>
-        <h4 *ngIf="hasMenu2">Menü 2</h4>
+        <h2 *ngIf="hasMenu2">Menü 2</h2>
         <p *ngIf="hasMenu2">{{bestellung.menu2!.name}} - {{bestellung.menu2!.preis}} €</p>
-        <h4 *ngIf="hasMenu2">Vegetarisch</h4>
+        <h2 *ngIf="hasMenu2">Vegetarisch</h2>
         <p *ngIf="hasMenu2">{{isVegetarisch}}</p>
-        <h4>Nachtisch</h4>
+        <h2>Nachtisch</h2>
         <p *ngIf="hasNachtisch">{{bestellung.nachtisch!.name}} - {{bestellung.nachtisch!.preis}} €</p>
-        <h4>Suppe</h4>
+        <h2>Suppe</h2>
         <p *ngIf="hasSuppe">{{bestellung.suppe!.name}} - {{bestellung.suppe!.preis}} €</p>
-    <h3>Gesamt Preis: {{bestellung.kosten}} €</h3>
+    <h2>Gesamt Preis: {{bestellung.kosten}} €</h2>
     <button mat-raised-button class="btn-delete" (click)="deleteBestellung(bestellung._id)">Löschen</button>
     </mat-card-content>
 </div>
