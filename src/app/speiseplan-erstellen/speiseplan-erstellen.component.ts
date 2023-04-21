@@ -67,10 +67,20 @@ export class SpeiseplanErstellenComponent {
     return true;
   }
 
+  checkIfPast():Boolean{
+    var today = new Date();
+    if(this.newDay.date.getTime() < today.getTime()){
+      alert("Fehler: Der Tag liegt in der Vergangenheit!");
+      this.newDay = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+      return false;
+    }
+    return true;
+  }
+
   async addDay(){
     var transfer: Date = new Date(this.newDay.date);
     this.newDay.date = transfer;
-    if(this.checkForSaturday() && this.checkIfExists()){
+    if(this.checkForSaturday() && this.checkIfExists() && this.checkIfPast()){
       try{
         const result = await firstValueFrom(this.http.post<any>("/day", this.newDay, {withCredentials: true}));
         this.getDays();
