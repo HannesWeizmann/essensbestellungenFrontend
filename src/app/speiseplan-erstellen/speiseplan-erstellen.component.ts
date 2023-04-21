@@ -44,13 +44,40 @@ export class SpeiseplanErstellenComponent {
     this.router.navigate(['/adminportal'])
   }
 
-  async addDay(){
-    try{
-      const result = await firstValueFrom(this.http.post<any>("/day", this.newDay, {withCredentials: true}));
-      this.getDays();
+  checkForSaturday(): Boolean{
+
+    if(this.newDay.date.getDay() ==6){
+      if(this.newDay.menu1 != this.defaultgericht || this.newDay.suppe != this.defaultgericht){
+        alert("Fehler: Samstags gibt es nur Menü2 und Nachtisch! ");
+        this.newDay = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+        return false;
+      }
+      return true;
+    }
+    return true;
+  }
+
+  checkIfExists():Boolean{
+    var match = this.days.filter(e=>e.date.toLocaleDateString() == this.newDay.date.toLocaleDateString());
+    if(match.length>0){
+      alert("Fehler: Dieser Tag exisiert bereits!")
       this.newDay = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
-      this.addVisible = false;
-    }catch(error){alert((error as Error).message)}
+      return false;
+    }
+    return true;
+  }
+
+  async addDay(){
+    var transfer: Date = new Date(this.newDay.date);
+    this.newDay.date = transfer;
+    if(this.checkForSaturday() && this.checkIfExists()){
+      try{
+        const result = await firstValueFrom(this.http.post<any>("/day", this.newDay, {withCredentials: true}));
+        this.getDays();
+        this.newDay = new Day(this.defaultdate, this.defaultgericht, this.defaultgericht, this.defaultgericht,this.defaultgericht);
+        this.addVisible = false;
+      }catch(error){alert((error as Error).message)}
+    }
   }
 
   async getDays(){
