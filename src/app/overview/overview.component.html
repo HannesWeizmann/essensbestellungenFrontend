@@ -1,0 +1,28 @@
+<button  mat-raised-button class="btn-back" (click) = "navigateBack();" >Zurück</button>
+<br><br>
+<div class="listWrapper">
+    <mat-card *ngFor="let element of overviews">
+        <mat-card-content  class="date-card">
+            <p>{{element.date.toLocaleDateString()}}
+                <button mat-raised-button class="btn-show" (click)="showDetail(element.date)">Anzeigen</button>
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="detail-wrapper" *ngIf="detailVisible">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{overview.date.toLocaleDateString()}}</mat-card-title>
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+            <h3>Anzahl Bestellungen Menu 1: {{overview.menu1Count}}</h3>
+            <h3>Anzahl Bestellungen Menu 2: {{overview.menu2Count}}</h3>
+            <h3>Anzahl Bestellungen Menu 2 vegetarisch: {{overview.menu2VegCount}}</h3>
+            <h3>Anzahl Bestellungen Nachtisch: {{overview.nachtischCount}}</h3>
+            <h3>Anzahl Bestellungen Suppe: {{overview.suppeCount}}</h3>
+
+        </mat-card-content>
+    </mat-card>
+</div>

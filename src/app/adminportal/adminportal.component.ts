@@ -27,4 +27,8 @@ export class AdminportalComponent {
     async navigateBack(){
       this.router.navigate(['/speiseplan'])
     }
+
+    async navigateToOverview(){
+      this.router.navigate(['/overview'])
+    }
 }

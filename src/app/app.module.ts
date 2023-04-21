@@ -22,6 +22,7 @@ import {AdminGuard} from 'src/app/guards/adminGuard';
 import { UserGuard } from './guards/userGuard';
 import { SpeiseplanErstellenComponent } from './speiseplan-erstellen/speiseplan-erstellen.component';
 import { MeineBestellungenComponent } from './meine-bestellungen/meine-bestellungen.component';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MeineBestellungenComponent } from './meine-bestellungen/meine-bestellun
     SpeiseplanComponent,
     SignUpComponent,
     SpeiseplanErstellenComponent,
-    MeineBestellungenComponent
+    MeineBestellungenComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
