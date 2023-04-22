@@ -125,37 +125,50 @@ export class SpeiseplanComponent implements OnInit {
   }
 
 
+  checkForDate():Boolean{
+    var today = new Date();
+    var deadline: Date = this.montag;
+    deadline.setDate(this.montag.getDate()-4);
+    deadline.setHours(18,0,0);
+    if(today.getTime() > deadline.getTime()){
+      alert("Fehler: Bestellungen müssen bis Donnerstag 18:00 der Vorwoche getätigt werden! ");
+      return false;
+    }
+    return true;
+  }
 
 
   async submitBestellung() {
     
-
-    if (!this.selectedTag) {
-      alert("Bitte wählen Sie einen Tag aus.");
-      return;
+    if(this.checkForDate()){
+      if (!this.selectedTag) {
+        alert("Bitte wählen Sie einen Tag aus.");
+        return;
+      }
+      if (!this.selectedMenu) {
+        alert("Bitte wählen Sie ein Menü aus.");
+        return;
+      }
+      this.kostenBerechnen();
+      this.newBestellung.kosten = this.kosten;
+      //Code, der die Bestellung an den Server sendet oder lokal speichert
+      // ...
+      try {
+        const result = await firstValueFrom(this.http.post<any>("/bestellung", this.newBestellung,{withCredentials:true}));
+      } catch (error) {
+        alert((error as Error).message)
+      }
+    
+      // Rücksetzen des Formulars
+      this.selectedTag = '';
+      this.selectedMenu = '';
+      this.hasNachtisch = false;
+      this.hasSuppe = false;
+      this.isVegetarisch = false;
+    
+      alert("Ihre Bestellung wurde erfolgreich aufgegeben.");
     }
-    if (!this.selectedMenu) {
-      alert("Bitte wählen Sie ein Menü aus.");
-      return;
-    }
-    this.kostenBerechnen();
-    this.newBestellung.kosten = this.kosten;
-    //Code, der die Bestellung an den Server sendet oder lokal speichert
-    // ...
-    try {
-      const result = await firstValueFrom(this.http.post<any>("/bestellung", this.newBestellung,{withCredentials:true}));
-    } catch (error) {
-      alert((error as Error).message)
-    }
-  
-    // Rücksetzen des Formulars
-    this.selectedTag = '';
-    this.selectedMenu = '';
-    this.hasNachtisch = false;
-    this.hasSuppe = false;
-    this.isVegetarisch = false;
-  
-    alert("Ihre Bestellung wurde erfolgreich aufgegeben.");
+    
   }
 
   createBestellung(){
