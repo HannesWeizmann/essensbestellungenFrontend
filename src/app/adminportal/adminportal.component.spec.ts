@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { AdminportalComponent } from './adminportal.component';
+
+import { AppHttpClient } from '../shared/http-client.service';
+import { AuthService } from '../shared/auth.service';
 
 describe('AdminportalComponent', () => {
   let component: AdminportalComponent;
@@ -8,7 +12,9 @@ describe('AdminportalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminportalComponent ]
+      declarations: [ AdminportalComponent ],
+      imports: [ HttpClientTestingModule ],
+      providers: [ AppHttpClient, AuthService ]
     })
     .compileComponents();
 

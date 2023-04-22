@@ -23,6 +23,8 @@ import { UserGuard } from './guards/userGuard';
 import { SpeiseplanErstellenComponent } from './speiseplan-erstellen/speiseplan-erstellen.component';
 import { MeineBestellungenComponent } from './meine-bestellungen/meine-bestellungen.component';
 import { OverviewComponent } from './overview/overview.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import { OverviewComponent } from './overview/overview.component';
     SignUpComponent,
     SpeiseplanErstellenComponent,
     MeineBestellungenComponent,
-    OverviewComponent
+    OverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,8 @@ import { OverviewComponent } from './overview/overview.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatSelectModule,
   ],
   providers: [AppHttpClient, AuthService, UserService, AdminGuard, UserGuard],
   bootstrap: [AppComponent]
