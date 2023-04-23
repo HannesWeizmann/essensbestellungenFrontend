@@ -9,7 +9,16 @@
         </p>
         </mat-card-content>
     </mat-card>
+    <br>
+    <button mat-raised-button class="btn-back" (click)="generateWeeklyPDF()">PDF Bestellungen diese Woche</button>
+    <br>
+    <br>
+    <button mat-raised-button class="btn-back" (click)="generatenaechsteWochePDF()">PDF Bestellungen nächste Woche</button>
+    <br>
+    <br>
+    <button mat-raised-button class="btn-back" (click)="generateuebernaechsteWochePDF()">PDF Bestellungen übernächste Woche</button>
 </div>
+
 
 <div class="detail-wrapper" *ngIf="detailsVisible">
     <mat-card-header>

@@ -4,6 +4,11 @@ import { firstValueFrom, of } from 'rxjs';
 import { AuthService } from '../shared/auth.service';
 import { AppHttpClient } from '../shared/http-client.service';
 import { SignUpComponent } from './sign-up.component';
+import { MatCard, MatCardContent, MatCardFooter, MatCardHeader, MatCardTitle } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -19,7 +24,14 @@ describe('SignUpComponent', () => {
     router = jasmine.createSpyObj('Router', ['navigate']);
 
     await TestBed.configureTestingModule({
-      declarations: [SignUpComponent],
+      declarations: [SignUpComponent,
+      MatCard,
+      MatCardHeader,
+      MatCardTitle,
+      MatCardContent,
+      MatFormField,
+      MatCardFooter],
+      imports: [FormsModule, MatInputModule, BrowserAnimationsModule],
       providers: [
         { provide: AuthService, useValue: authService },
         { provide: AppHttpClient, useValue: http },
@@ -29,6 +41,7 @@ describe('SignUpComponent', () => {
   });
 
   beforeEach(() => {
+    spyOn(window, 'alert')
     fixture = TestBed.createComponent(SignUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -56,7 +69,7 @@ describe('SignUpComponent', () => {
       component.userToSignUp,
       jasmine.objectContaining({ withCredentials: true })
     );
-    expect(alert).toHaveBeenCalledWith('Success');
+    expect(window.alert).toHaveBeenCalledWith('Success');
     expect(router.navigate).toHaveBeenCalledWith(['/login']);
   });
 

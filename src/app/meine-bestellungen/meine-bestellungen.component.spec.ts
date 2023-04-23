@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { MeineBestellungenComponent } from './meine-bestellungen.component';
+
+import { AppHttpClient } from '../shared/http-client.service';
+import { AuthService } from '../shared/auth.service';
 
 describe('MeineBestellungenComponent', () => {
   let component: MeineBestellungenComponent;
@@ -8,7 +12,9 @@ describe('MeineBestellungenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MeineBestellungenComponent ]
+      declarations: [ MeineBestellungenComponent ],
+      imports: [ HttpClientTestingModule ],
+      providers: [ AppHttpClient, AuthService ]
     })
     .compileComponents();
 

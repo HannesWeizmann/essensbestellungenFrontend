@@ -6,6 +6,7 @@ import { firstValueFrom, Observable , map} from 'rxjs';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
 import { Gericht } from '../dataclass/gericht';
 import {Bestellung} from 'src/app/dataclass/bestellung';
+import { MatCardModule } from '@angular/material/card';
 
 
 @Component({

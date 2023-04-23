@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ShowGerichtComponent } from './show-gericht.component';
+
+import { AppHttpClient } from '../shared/http-client.service';
+import { AuthService } from '../shared/auth.service';
 
 describe('ShowGerichtComponent', () => {
   let component: ShowGerichtComponent;
@@ -8,7 +12,9 @@ describe('ShowGerichtComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowGerichtComponent ]
+      declarations: [ ShowGerichtComponent ],
+      imports: [ HttpClientTestingModule ],
+      providers: [ AppHttpClient, AuthService ]
     })
     .compileComponents();
 
