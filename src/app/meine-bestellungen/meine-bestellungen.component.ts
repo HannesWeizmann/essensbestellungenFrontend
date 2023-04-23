@@ -130,7 +130,7 @@ export class MeineBestellungenComponent implements OnInit{
     let page =1;
   
     doc.setFontSize(16);
-    doc.text('Wöchentliche Bestellungen', 10, yPos);
+    doc.text(`Wöchentliche Bestellungen_${weekStart.toLocaleDateString()}-${weekEnd.toLocaleDateString()}`, 10, yPos);
     yPos += 20;
   
     doc.setFontSize(12);
@@ -143,23 +143,26 @@ export class MeineBestellungenComponent implements OnInit{
       yPos += 10;
   
       if (b.menu1 !== undefined) {
-        doc.text(`Menü 1: ${b.menu1!.name}`, 10, yPos);
+        doc.text(`Menü 1: ${b.menu1!.name} - ${b.menu1!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.menu2 !== undefined) {
-        doc.text(`Menü 2: ${b.menu2!.name}`, 10, yPos);
+        doc.text(`Menü 2: ${b.menu2!.name} - ${b.menu2!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.suppe !== undefined) {
-        doc.text(`Suppe: ${b.suppe!.name}`, 10, yPos);
+        doc.text(`Suppe: ${b.suppe!.name} - ${b.suppe!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.nachtisch !== undefined) {
-        doc.text(`Nachtisch: ${b.nachtisch!.name}`, 10, yPos);
+        doc.text(`Nachtisch: ${b.nachtisch!.name} - ${b.nachtisch!.preis} €`, 10, yPos);
         yPos += 10;
       }
   
       doc.text(`Vegetarisch: ${b.vegetarisch ? 'Ja' : 'Nein'}`, 10, yPos);
+      yPos += 10;
+
+      doc.text(`Gesamtpreis: ${b.kosten} €`, 10, yPos);
       yPos += 20;
 
      // Überprüfen, ob das Ende der Seite erreicht ist
@@ -203,7 +206,7 @@ export class MeineBestellungenComponent implements OnInit{
     let page =1;
   
     doc.setFontSize(16);
-    doc.text('Wöchentliche Bestellungen', 10, yPos);
+    doc.text(`Wöchentliche Bestellungen_${weekStart.toLocaleDateString()}-${weekEnd.toLocaleDateString()}`, 10, yPos);
     yPos += 20;
   
     doc.setFontSize(12);
@@ -216,23 +219,26 @@ export class MeineBestellungenComponent implements OnInit{
       yPos += 10;
   
       if (b.menu1 !== undefined) {
-        doc.text(`Menü 1: ${b.menu1!.name}`, 10, yPos);
+        doc.text(`Menü 1: ${b.menu1!.name} - ${b.menu1!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.menu2 !== undefined) {
-        doc.text(`Menü 2: ${b.menu2!.name}`, 10, yPos);
+        doc.text(`Menü 2: ${b.menu2!.name} - ${b.menu2!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.suppe !== undefined) {
-        doc.text(`Suppe: ${b.suppe!.name}`, 10, yPos);
+        doc.text(`Suppe: ${b.suppe!.name} - ${b.suppe!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.nachtisch !== undefined) {
-        doc.text(`Nachtisch: ${b.nachtisch!.name}`, 10, yPos);
+        doc.text(`Nachtisch: ${b.nachtisch!.name} - ${b.nachtisch!.preis} €`, 10, yPos);
         yPos += 10;
       }
   
       doc.text(`Vegetarisch: ${b.vegetarisch ? 'Ja' : 'Nein'}`, 10, yPos);
+      yPos += 10;
+
+      doc.text(`Gesamtpreis: ${b.kosten} €`, 10, yPos);
       yPos += 20;
 
      // Überprüfen, ob das Ende der Seite erreicht ist
@@ -275,7 +281,7 @@ export class MeineBestellungenComponent implements OnInit{
     let page =1;
   
     doc.setFontSize(16);
-    doc.text('Wöchentliche Bestellungen', 10, yPos);
+    doc.text(`Wöchentliche Bestellungen_${weekStart.toLocaleDateString()}-${weekEnd.toLocaleDateString()}`, 10, yPos);
     yPos += 20;
   
     doc.setFontSize(12);
@@ -288,23 +294,26 @@ export class MeineBestellungenComponent implements OnInit{
       yPos += 10;
   
       if (b.menu1 !== undefined) {
-        doc.text(`Menü 1: ${b.menu1!.name}`, 10, yPos);
+        doc.text(`Menü 1: ${b.menu1!.name} - ${b.menu1!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.menu2 !== undefined) {
-        doc.text(`Menü 2: ${b.menu2!.name}`, 10, yPos);
+        doc.text(`Menü 2: ${b.menu2!.name} - ${b.menu2!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.suppe !== undefined) {
-        doc.text(`Suppe: ${b.suppe!.name}`, 10, yPos);
+        doc.text(`Suppe: ${b.suppe!.name} - ${b.suppe!.preis} €`, 10, yPos);
         yPos += 10;
       }
       if (b.nachtisch !== undefined) {
-        doc.text(`Nachtisch: ${b.nachtisch}`, 10, yPos);
+        doc.text(`Nachtisch: ${b.nachtisch} - ${b.nachtisch!.preis} €`, 10, yPos);
         yPos += 10;
       }
   
       doc.text(`Vegetarisch: ${b.vegetarisch ? 'Ja' : 'Nein'}`, 10, yPos);
+      yPos += 10;
+
+      doc.text(`Gesamtpreis: ${b.kosten} €`, 10, yPos);
       yPos += 20;
 
      // Überprüfen, ob das Ende der Seite erreicht ist
