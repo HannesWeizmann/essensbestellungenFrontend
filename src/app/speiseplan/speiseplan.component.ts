@@ -127,7 +127,7 @@ export class SpeiseplanComponent implements OnInit {
 
   checkForDate():Boolean{
     var today = new Date();
-    var deadline: Date = this.montag;
+    var deadline: Date = new Date(this.montag);
     deadline.setDate(this.montag.getDate()-4);
     deadline.setHours(18,0,0);
     if(today.getTime() > deadline.getTime()){
@@ -137,10 +137,18 @@ export class SpeiseplanComponent implements OnInit {
     return true;
   }
 
+  checkIfDayExists():Boolean{
+    var match = this.days.filter(e=>e.date.toLocaleDateString() == this.newBestellung.date.toLocaleDateString());
+    if(match.length <1){
+      alert("Fehler: Bestellungen nur möglich für Tage die einen Speiseplan haben!")
+      return false;
+    }
+    return true;
+  }
 
   async submitBestellung() {
     
-    if(this.checkForDate()){
+    if(this.checkForDate() && this.checkIfDayExists()){
       if (!this.selectedTag) {
         alert("Bitte wählen Sie einen Tag aus.");
         return;
