@@ -149,6 +149,13 @@ export class SpeiseplanComponent implements OnInit {
 
   async submitBestellung() {
     
+    let transfer: Date = new Date(this.newBestellung.date)
+    this.newBestellung.date = transfer;
+    this.days.forEach(element => {
+      transfer = new Date(element.date);
+      element.date =transfer;
+    });
+
     if(this.checkForDate() && this.checkIfDayExists()){
       if (!this.selectedTag) {
         alert("Bitte wählen Sie einen Tag aus.");
