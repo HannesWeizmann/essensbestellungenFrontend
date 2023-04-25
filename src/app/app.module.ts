@@ -25,6 +25,7 @@ import { MeineBestellungenComponent } from './meine-bestellungen/meine-bestellun
 import { OverviewComponent } from './overview/overview.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
+import { UebersichtComponent } from './uebersicht/uebersicht.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MatSelectModule } from '@angular/material/select';
     SpeiseplanErstellenComponent,
     MeineBestellungenComponent,
     OverviewComponent,
+    UebersichtComponent,
   ],
   imports: [
     BrowserModule,

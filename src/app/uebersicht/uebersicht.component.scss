@@ -1,0 +1,45 @@
+button.btn-back {
+    color: white;
+    background-color: darkblue;
+}
+
+.speiseplan-wrapper,
+.bestellformular-wrapper {
+  width: 100%;
+  max-width: 50%;
+  height: 200px;
+}
+
+@media (min-width: 768px) {
+  .speiseplan-wrapper,
+  .bestellformular-wrapper {
+    max-width: 28%;
+  }
+}
+
+mat-card{
+    background-color: white;
+    width: fit-content;
+
+}
+
+mat-card-title {
+    color: rgb(112, 189, 112);
+}
+
+
+th, td {
+  padding: 10px; 
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+.green {
+    background-color: rgb(112, 189, 112);
+}
+
+.grey {
+background-color: lightgrey;
+}

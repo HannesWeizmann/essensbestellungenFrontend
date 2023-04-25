@@ -1,0 +1,78 @@
+<button  mat-raised-button class="btn-back" (click) = "navigateBack();" >Zurück</button>
+<br><br>
+<div class="speiseplan-wrapper">
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Bestellübersicht &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{montag.toLocaleDateString()}} - {{sonntag.toLocaleDateString()}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <thead>
+          <tr class="green">
+            <th></th>
+          <th>Montag - {{montag.getDate()}}.{{montag.getMonth() + 1}}</th>
+            <th>Dienstag - {{dienstag.getDate()}}.{{dienstag.getMonth() + 1}}</th>
+            <th>Mittwoch - {{mittwoch.getDate()}}.{{mittwoch.getMonth() + 1}}</th>
+            <th>Donnerstag - {{donnerstag.getDate()}}.{{donnerstag.getMonth() + 1}}</th>
+            <th>Freitag - {{freitag.getDate()}}.{{freitag.getMonth() + 1}}</th>
+            <th>Samstag - {{samstag.getDate()}}.{{samstag.getMonth() + 1}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="grey">
+            <th>Menü 1</th>
+            <td>{{monday.menu1Count}}</td>
+            <td>{{tuesday.menu1Count}}</td>
+            <td>{{wendsday.menu1Count}}</td>
+            <td>{{thursday.menu1Count}}</td>
+            <td>{{friday.menu1Count}}</td>
+            <td>{{saturday.menu1Count}}</td>
+          </tr>
+          <tr class="green">
+            <th>Menü 2</th>
+            <td>{{monday.menu2Count}}</td>
+            <td>{{tuesday.menu2Count}}</td>
+            <td>{{wendsday.menu2Count}}</td>
+            <td>{{thursday.menu2Count}}</td>
+            <td>{{friday.menu2Count}}</td>
+            <td>{{saturday.menu2Count}}</td>
+          </tr>
+          <tr class="grey">
+            <th>Menü 2 (veg)</th>
+            <td>{{monday.menu2VegCount}}</td>
+            <td>{{tuesday.menu2VegCount}}</td>
+            <td>{{wendsday.menu2VegCount}}</td>
+            <td>{{thursday.menu2VegCount}}</td>
+            <td>{{friday.menu2VegCount}}</td>
+            <td>{{saturday.menu2VegCount}}</td>
+          </tr>
+          <tr class="green">
+            <th>Nachtisch</th>
+            <td>{{monday.nachtischCount}}</td>
+            <td>{{tuesday.nachtischCount}}</td>
+            <td>{{wendsday.nachtischCount}}</td>
+            <td>{{thursday.nachtischCount}}</td>
+            <td>{{friday.nachtischCount}}</td>
+            <td>{{saturday.nachtischCount}}</td>
+          </tr>
+          <tr class="grey">
+            <th>Suppe</th>
+            <td>{{monday.suppeCount}}</td>
+            <td>{{tuesday.suppeCount}}</td>
+            <td>{{wendsday.suppeCount}}</td>
+            <td>{{thursday.suppeCount}}</td>
+            <td>{{friday.suppeCount}}</td>
+            <td>{{saturday.suppeCount}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </mat-card-content>
+  </mat-card>
+  <br>
+<button  mat-raised-button class="btn-back" (click) = "vorherigeWoche();" >Vorherige Woche</button>
+&nbsp;
+<button  mat-raised-button class="btn-back" (click) = "naechsteWoche();" >Nächste Woche</button>
+</div>
