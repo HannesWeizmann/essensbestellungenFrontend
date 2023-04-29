@@ -31,7 +31,7 @@
     "@angular/cli": "~15.2.1",
     "@angular/compiler-cli": "^15.2.0",
     "@types/jasmine": "~4.3.0",
-    "cypress": "^12.10.0",
+    "cypress": "^12.11.0",
     "jasmine": "^4.6.0",
     "jasmine-core": "~4.5.0",
     "jasmine-matchers": "^0.2.3",
