@@ -9,7 +9,7 @@
         <button mat-stroked-button class="button" routerLink="/sign-up">Sign Up</button>
         <button mat-stroked-button class="button" (click)="logout()">Log Out</button>
 
-        <a *ngIf="isLoggedIn()" mat-stroked-button class="button" (click)="logout()">Logout</a>
+        <a *ngIf="isLoggedIn()" type="logout" mat-stroked-button class="button" (click)="logout()">Logout</a>
     </mat-toolbar-row>
   </mat-toolbar>
   
