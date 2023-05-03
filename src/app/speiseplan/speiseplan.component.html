@@ -106,7 +106,7 @@
       <mat-checkbox *ngIf="selectedTag !== 'Samstag'"[(ngModel)]="hasSuppe" (change)="kostenBerechnen()">Suppe bestellen&nbsp;&nbsp;</mat-checkbox>
       <mat-card-title> Kosten: {{kosten}} € </mat-card-title>
       <mat-card-actions>
-        <button mat-raised-button class="btn-back" (click)="submitBestellung()">Bestellung aufgeben</button>
+        <button mat-raised-button type="submit" class="btn-back" (click)="submitBestellung()">Bestellung aufgeben</button>
       </mat-card-actions>
     </mat-card-content>
   </mat-card>
