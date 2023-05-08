@@ -27,9 +27,6 @@ export class ShowGerichtComponent {
 
   async reload(){
     try{
-      //this.gerichte = this.http.get<Gericht[]>("/gericht").pipe(map((data: { gerichte: any; }) => data.gerichte));
-      //const result = await firstValueFrom
-      //this.gerichte = await firstValueFrom(this.http.get<Gericht[]>("http://localhost:3000/gericht",{ withCredentials: true}))
       this.gerichte= this.http.get<Gericht[]>("http://localhost:3000/gericht",{ withCredentials: true}).pipe(map(data=> data));
     }catch(error){
       this.errorMessage = (error as Error).message;    }

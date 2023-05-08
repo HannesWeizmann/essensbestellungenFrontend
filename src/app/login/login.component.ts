@@ -47,7 +47,6 @@ export class LoginComponent implements OnInit {
   async login(){
        
     try{
-      //const result = await firstValueFrom(this.http.post<{User: string, msg: string}>("/users/login", this.userToLogin,{ withCredentials: true}))
       const result = await firstValueFrom(this.http.post<{User: {userId: string, username: string, role: string}, msg: string}>("/users/login", this.userToLogin,{ withCredentials: true}))
       this.auth.setRole(result.User.role);
       this.auth.setUsername(result.User.username);

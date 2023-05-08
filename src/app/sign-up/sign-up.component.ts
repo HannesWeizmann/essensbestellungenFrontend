@@ -35,7 +35,6 @@ export class SignUpComponent implements OnInit {
        
     try{
       const result = await firstValueFrom(this.http.post<{User: string, msg: string}>("/users/signup", this.userToSignUp,{ withCredentials: true}))
-      //this.http.get<any>('/users/protected',{ withCredentials: true}).subscribe((data: any) => {alert(data.msg)});
       alert(result.msg)
       await this.router.navigate(["/login"]);
     }catch(error){

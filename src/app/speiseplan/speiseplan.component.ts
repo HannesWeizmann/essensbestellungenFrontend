@@ -79,15 +79,11 @@ export class SpeiseplanComponent implements OnInit {
     this.username = this.auth.getUsername();
     this.getMonday();
     this.getDays();
-
-    //this.menu1_montag = this.getGericht('Spaghetti Carbonara');
-
   }
 
   async getDays(){
     try {
       this.days = await firstValueFrom(this.http.get<Day[]>("/day/",{ withCredentials: true}));
-      //alert(this.days[0].menu1.name);
       this.matchDays();
     } catch (error) {
       alert((error as Error).message)
@@ -167,8 +163,7 @@ export class SpeiseplanComponent implements OnInit {
       }
       this.kostenBerechnen();
       this.newBestellung.kosten = this.kosten;
-      //Code, der die Bestellung an den Server sendet oder lokal speichert
-      // ...
+
       try {
         const result = await firstValueFrom(this.http.post<any>("/bestellung", this.newBestellung,{withCredentials:true}));
       } catch (error) {
